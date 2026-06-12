@@ -99,7 +99,11 @@ main { width: min(100%, 920px); min-height: calc(100vh - 210px); margin: auto; }
 .requirement.disqualified { border-color: var(--ng); background: var(--ng-bg); }
 .question-number { margin: 0 0 5px; color: var(--blue); font-weight: 800; font-size: .8rem; text-transform: uppercase; }
 .question { margin: 0 0 14px; font-weight: 700; line-height: 1.7; }
+.reference-translation { display: inline-block; margin: 0 0 6px; padding: 2px 8px; color: var(--blue); font-size: .75rem; font-weight: 800; background: var(--blue-light); border-radius: 99px; }
 .translation-note { margin: -4px 0 14px; color: #795b00; font-size: .85rem; }
+.original-text { margin: -4px 0 14px; color: var(--muted); font-size: .84rem; }
+.original-text summary { min-height: 36px; padding: 6px 0; color: var(--blue); font-weight: 700; cursor: pointer; }
+.original-text p { margin: 4px 0 0; padding: 10px 12px; color: var(--ink); background: #f3f6f7; border-left: 3px solid var(--line); border-radius: 6px; }
 .answer-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .answer-options.choices { grid-template-columns: 1fr; }
 .answer-button { min-height: 52px; padding: 10px 12px; color: var(--navy); font-weight: 800; background: #f5fafc; border: 2px solid #9bbeca; border-radius: 10px; }

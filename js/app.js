@@ -7,7 +7,8 @@ const state = {
   category: "all",
   query: "",
   selected: null,
-  answers: {}
+  answers: {},
+  panel: "check-panel"
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -24,10 +25,12 @@ function bindStaticEvents() {
   $$(".language-button").forEach((button) => button.addEventListener("click", () => {
     state.language = button.dataset.language;
     document.documentElement.lang = state.language;
+    saveUrlState();
     renderAll();
   }));
   $("#search-input").addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLocaleLowerCase();
+    saveUrlState();
     renderList();
   });
   $("#back-button").addEventListener("click", showList);
@@ -47,8 +50,14 @@ async function loadData() {
     if (!dataResponse.ok || !i18nResponse.ok) throw new Error("HTTP error");
     [state.data, state.i18n] = await Promise.all([dataResponse.json(), i18nResponse.json()]);
     validateData(state.data);
+    restoreUrlState();
     renderAll();
-    showList();
+    if (state.selected) {
+      showOnly("detail-view");
+      switchPanel(state.panel, false);
+    } else {
+      showOnly("list-view");
+    }
   } catch (error) {
     console.error(error);
     applyTranslations();
@@ -64,6 +73,60 @@ function validateData(data) {
     ids.add(item.id);
     if (!Array.isArray(item.requirements)) throw new Error(`Missing requirements: ${item.id}`);
   });
+}
+
+function restoreUrlState() {
+  const params = new URLSearchParams(window.location.search);
+  const language = params.get("lang");
+  if (["ja", "en", "zh", "ko", "vi"].includes(language)) state.language = language;
+  state.category = params.get("category") || "all";
+  state.query = params.get("q") || "";
+  $("#search-input").value = state.query;
+  const subsidyId = params.get("subsidy");
+  state.selected = state.data.subsidies.find((item) => item.id === subsidyId) || null;
+  state.panel = params.get("panel") === "info" ? "info-panel" : "check-panel";
+  if (state.selected) {
+    try {
+      const values = JSON.parse(params.get("answers") || "{}");
+      state.answers = Object.fromEntries(
+        Object.entries(values)
+          .filter(([id]) => state.selected.requirements.some((requirement) => requirement.id === id))
+          .map(([id, value]) => {
+            const requirement = state.selected.requirements.find((item) => item.id === id);
+            const option = requirement.type === "choice"
+              ? requirement.choices.find((choice) => choice.value === value)
+              : null;
+            return [id, {
+              value,
+              disqualify: requirement.type === "yesno"
+                ? value === "no" && requirement.required
+                : Boolean(option?.disqualify),
+              requirementId: id
+            }];
+          })
+      );
+    } catch {
+      state.answers = {};
+    }
+  }
+  document.documentElement.lang = state.language;
+}
+
+function saveUrlState() {
+  const params = new URLSearchParams();
+  if (state.language !== "ja") params.set("lang", state.language);
+  if (state.category !== "all") params.set("category", state.category);
+  if (state.query) params.set("q", state.query);
+  if (state.selected) {
+    params.set("subsidy", state.selected.id);
+    if (state.panel === "info-panel") params.set("panel", "info");
+    const answers = Object.fromEntries(
+      Object.entries(state.answers).map(([id, answer]) => [id, answer.value])
+    );
+    if (Object.keys(answers).length) params.set("answers", JSON.stringify(answers));
+  }
+  const query = params.toString();
+  history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`);
 }
 
 function t(key, params = {}) {
@@ -129,6 +192,7 @@ function renderCategories() {
     </button>`).join("");
   $$(".category-tab").forEach((button) => button.addEventListener("click", () => {
     state.category = button.dataset.category;
+    saveUrlState();
     renderCategories();
     renderList();
   }));
@@ -173,6 +237,8 @@ function renderList() {
 function selectSubsidy(id) {
   state.selected = state.data.subsidies.find((item) => item.id === id);
   state.answers = {};
+  state.panel = "check-panel";
+  saveUrlState();
   renderDetail();
   showOnly("detail-view");
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -217,14 +283,21 @@ function requirementHtml(requirement, number) {
   const answer = state.answers[requirement.id];
   const question = localized(requirement.question);
   const fallback = state.language !== "ja" && !requirement.question?.[state.language];
+  const translated = state.language !== "ja" && Boolean(requirement.question?.[state.language]);
   const options = requirement.type === "yesno"
     ? [{ value: "yes", label: t("yes") }, { value: "no", label: t("no"), disqualify: requirement.required }]
     : requirement.choices.map((choice) => ({ ...choice, label: localized(choice.label) }));
   return `
     <article id="requirement-${escapeHtml(requirement.id)}" class="requirement ${answer ? "answered" : ""} ${answer?.disqualify ? "disqualified" : ""}">
       <p class="question-number">${escapeHtml(t("question_number", { number }))}</p>
+      ${translated ? `<p class="reference-translation">${escapeHtml(t("reference_translation"))}</p>` : ""}
       <p class="question">${escapeHtml(question)}</p>
       ${fallback ? `<p class="translation-note">${escapeHtml(t("japanese_only"))}</p>` : ""}
+      ${translated ? `
+        <details class="original-text">
+          <summary>${escapeHtml(t("show_japanese_original"))}</summary>
+          <p lang="ja">${escapeHtml(requirement.question.ja)}</p>
+        </details>` : ""}
       <div class="answer-options ${requirement.type === "choice" ? "choices" : ""}">
         ${options.map((option) => `
           <button class="answer-button ${answer?.value === option.value ? `selected ${option.disqualify ? "disqualifying" : ""}` : ""}"
@@ -243,6 +316,7 @@ function answerRequirement(button) {
     disqualify: button.dataset.disqualify === "true",
     requirementId: requirement.id
   };
+  saveUrlState();
   renderRequirements();
   updateResult();
   const index = state.selected.requirements.findIndex((item) => item.id === requirement.id);
@@ -289,6 +363,7 @@ function renderInfo() {
   $("#info-panel").innerHTML = `
     <article class="info-card">
       <h2>${escapeHtml(t("official_requirements"))}</h2>
+      ${state.language !== "ja" ? `<p class="translation-note">${escapeHtml(t("official_japanese_note"))}</p>` : ""}
       ${Object.entries(grouped).map(([group, requirements]) => `
         <h3>${escapeHtml(groupText(group))}</h3>
         <ul class="official-list">${requirements.map((requirement) => `<li>${escapeHtml(requirement.question.ja)}</li>`).join("")}</ul>
@@ -313,19 +388,24 @@ function renderInfo() {
 
 function restartCheck() {
   state.answers = {};
+  saveUrlState();
   renderRequirements();
   updateResult();
   window.scrollTo({ top: $("#detail-header").offsetTop, behavior: "smooth" });
 }
 
-function switchPanel(panelId) {
+function switchPanel(panelId, save = true) {
+  state.panel = panelId;
   $$(".detail-panel").forEach((panel) => panel.classList.toggle("hidden", panel.id !== panelId));
   $$(".detail-tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.panel === panelId));
+  if (save) saveUrlState();
 }
 
 function showList() {
   state.selected = null;
   state.answers = {};
+  state.panel = "check-panel";
+  saveUrlState();
   showOnly("list-view");
   switchPanel("check-panel");
   window.scrollTo({ top: 0, behavior: "smooth" });
