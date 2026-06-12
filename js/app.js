@@ -80,6 +80,19 @@ function localized(value) {
   return value?.[state.language] || value?.ja || "";
 }
 
+function translatedLookup(section, value) {
+  if (!value || state.language === "ja") return value || "";
+  return state.i18n?.[state.language]?.[section]?.[value] || value;
+}
+
+function contactText(value) {
+  return translatedLookup("contacts", value);
+}
+
+function groupText(value) {
+  return translatedLookup("groups", value);
+}
+
 function applyTranslations() {
   $$("[data-i18n]").forEach((element) => { element.textContent = t(element.dataset.i18n); });
   $$("[data-i18n-placeholder]").forEach((element) => { element.placeholder = t(element.dataset.i18nPlaceholder); });
@@ -143,7 +156,7 @@ function renderList() {
       <p>${escapeHtml(localized(item.summary))}</p>
       <span class="card-meta">
         <span class="amount">${escapeHtml(t("amount"))}: ${escapeHtml(localized(item.amount))}</span>
-        <span>${escapeHtml(t("contact"))}: ${escapeHtml(item.contact.dept || item.contact.name)}</span>
+        <span>${escapeHtml(t("contact"))}: ${escapeHtml(contactText(item.contact.dept || item.contact.name))}</span>
       </span>
     </button>`).join("");
   $$(".subsidy-card").forEach((card) => card.addEventListener("click", () => selectSubsidy(card.dataset.id)));
@@ -168,8 +181,8 @@ function renderDetail() {
       <p>${escapeHtml(localized(item.summary))}</p>
       <p><strong>${escapeHtml(t("amount"))}:</strong> ${escapeHtml(localized(item.amount))}</p>
       <div class="detail-contact">
-        <strong>${escapeHtml(item.contact.dept || "")}</strong><br>
-        ${escapeHtml(item.contact.name || "")}
+        <strong>${escapeHtml(contactText(item.contact.dept || ""))}</strong>
+        ${item.contact.name ? `<br>${escapeHtml(contactText(item.contact.name))}` : ""}
         ${item.contact.tel ? `<br><a href="tel:${escapeHtml(item.contact.tel)}">☎ ${escapeHtml(item.contact.tel)}</a>` : ""}
       </div>
     </article>`;
@@ -183,7 +196,7 @@ function renderRequirements() {
   let number = 0;
   $("#requirements-list").innerHTML = Object.entries(groups).map(([group, requirements]) => `
     <section class="requirement-group">
-      <h2><span class="group-count">${requirements.length}</span>${escapeHtml(group)}</h2>
+      <h2><span class="group-count">${requirements.length}</span>${escapeHtml(groupText(group))}</h2>
       ${requirements.map((requirement) => {
         number += 1;
         return requirementHtml(requirement, number);
@@ -220,8 +233,7 @@ function answerRequirement(button) {
   state.answers[requirement.id] = {
     value: button.dataset.value,
     disqualify: button.dataset.disqualify === "true",
-    question: requirement.question.ja,
-    group: requirement.group
+    requirementId: requirement.id
   };
   renderRequirements();
   updateResult();
@@ -241,8 +253,12 @@ function updateResult() {
   const completed = required.every((item) => state.answers[item.id]);
   banner.className = "result-banner";
   if (failed) {
+    const failedRequirement = state.selected.requirements.find((item) => item.id === failed.requirementId);
     banner.classList.add("ng");
-    banner.innerHTML = `<strong>${escapeHtml(t("result_ng"))}</strong><br><span>${escapeHtml(t("failed_reason", { group: failed.group, question: failed.question }))}</span><br><small>${escapeHtml(t("continue_note"))}</small>`;
+    banner.innerHTML = `<strong>${escapeHtml(t("result_ng"))}</strong><br><span>${escapeHtml(t("failed_reason", {
+      group: groupText(failedRequirement.group),
+      question: localized(failedRequirement.question)
+    }))}</span><br><small>${escapeHtml(t("continue_note"))}</small>`;
   } else if (completed) {
     banner.classList.add("ok");
     banner.innerHTML = `<strong>${escapeHtml(t("result_ok"))}</strong><br><span>${escapeHtml(t("final_check"))}</span>`;
@@ -261,14 +277,14 @@ function renderInfo() {
     <article class="info-card">
       <h2>${escapeHtml(t("official_requirements"))}</h2>
       ${Object.entries(grouped).map(([group, requirements]) => `
-        <h3>${escapeHtml(group)}</h3>
+        <h3>${escapeHtml(groupText(group))}</h3>
         <ul class="official-list">${requirements.map((requirement) => `<li>${escapeHtml(requirement.question.ja)}</li>`).join("")}</ul>
       `).join("")}
     </article>
-    ${item.note?.ja ? `<article class="info-card"><h2>${escapeHtml(t("notes"))}</h2><p>${escapeHtml(item.note.ja)}</p></article>` : ""}
+    ${item.note?.ja ? `<article class="info-card"><h2>${escapeHtml(t("notes"))}</h2><p>${escapeHtml(localized(item.note))}</p></article>` : ""}
     <article class="info-card">
       <h2>${escapeHtml(t("contact_info"))}</h2>
-      <p><strong>${escapeHtml(item.contact.dept || "")}</strong><br>${escapeHtml(item.contact.name || "")}</p>
+      <p><strong>${escapeHtml(contactText(item.contact.dept || ""))}</strong>${item.contact.name ? `<br>${escapeHtml(contactText(item.contact.name))}` : ""}</p>
       ${item.contact.tel ? `<p><a href="tel:${escapeHtml(item.contact.tel)}">${escapeHtml(item.contact.tel)}</a></p>` : ""}
     </article>
     <article class="info-card">

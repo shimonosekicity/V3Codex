@@ -46,7 +46,9 @@
     "guideline_unavailable": "要綱PDFのURLは未登録です。担当課にご確認ください。",
     "print": "この内容を印刷／PDF保存",
     "data_notice": "本アプリの情報は令和8年度（2026年度）時点の調査に基づく参考情報です。最終的な対象可否は各担当課の判断によります。最新の要綱を必ずご確認ください。",
-    "data_version": "データ版 {version}（更新日: {date}）"
+    "data_version": "データ版 {version}（更新日: {date}）",
+    "groups": {},
+    "contacts": {}
   },
   "en": {
     "app_title": "Shimonoseki Subsidy Checker",
@@ -95,7 +97,13 @@
     "guideline_unavailable": "The rules PDF URL is not registered. Please ask the department.",
     "print": "Print / Save as PDF",
     "data_notice": "This app provides reference information based on research for fiscal year 2026. Final eligibility is determined by the responsible department. Always check the latest official rules.",
-    "data_version": "Data version {version} (updated {date})"
+    "data_version": "Data version {version} (updated {date})",
+    "groups": {
+      "その他":"Other requirements","移住元要件":"Previous residence","学歴要件":"Education","活動要件":"Activity requirements","居住・転入要件":"Residence and relocation","居住地域":"Residential area","居住地要件":"Location","居住要件":"Residence","継続居住要件":"Continued residence","限度":"Limits","手続き":"Procedure","就業等要件":"Employment or business","就職・起業要件":"Employment or entrepreneurship","住宅要件":"Housing","奨学金要件":"Scholarship","食堂運営時":"When operating a meal service","申請者要件":"Applicant","申請前提":"Application prerequisites","申請単位":"Application limit","選考":"Selection","窓口利用要件":"Consultation history","対象期間":"Eligible period","対象経費":"Eligible expenses","対象治療":"Eligible treatment","対象者要件":"Eligibility","対象住宅":"Eligible housing","対象住宅要件":"Eligible home","対象世帯":"Eligible household","注意":"Important note","入居条件":"Occupancy conditions","年齢要件":"Age","補助額区分（加算）":"Additional benefits","補助対象期間":"Subsidy period"
+    },
+    "contacts": {
+      "こども家庭課":"Children and Families Division","各総合支所 地域政策課":"Regional Policy Division at each branch office","健康推進課":"Health Promotion Division","健康推進課 母子保健係":"Health Promotion Division, Maternal and Child Health Section","建築指導課":"Building Guidance Division","産業立地・就業支援課":"Industrial Location and Employment Support Division","住宅政策課":"Housing Policy Division","母子保健係":"Maternal and Child Health Section","豊田／豊浦／豊北 総合支所 地域政策課":"Regional Policy Divisions, Toyota/Toyoura/Hohoku Branch Offices","豊北総合支所 地域政策課":"Regional Policy Division, Hohoku Branch Office"
+    }
   },
   "zh": {
     "app_title": "下关市 补助金条件确认",
@@ -144,7 +152,13 @@
     "guideline_unavailable": "尚未登记规定PDF网址，请咨询负责部门。",
     "print": "打印／保存为PDF",
     "data_notice": "本应用信息基于2026年度调查，仅供参考。最终资格由各负责部门判断。请务必确认最新规定。",
-    "data_version": "数据版本 {version}（更新日期：{date}）"
+    "data_version": "数据版本 {version}（更新日期：{date}）",
+    "groups": {
+      "その他":"其他条件","移住元要件":"迁出地条件","学歴要件":"学历条件","活動要件":"活动条件","居住・転入要件":"居住与迁入条件","居住地域":"居住地区","居住地要件":"居住地条件","居住要件":"居住条件","継続居住要件":"持续居住条件","限度":"限额","手続き":"办理手续","就業等要件":"就业等条件","就職・起業要件":"就业・创业条件","住宅要件":"住房条件","奨学金要件":"奖学金条件","食堂運営時":"经营食堂时","申請者要件":"申请人条件","申請前提":"申请前提","申請単位":"申请次数","選考":"选拔","窓口利用要件":"咨询窗口使用条件","対象期間":"适用期间","対象経費":"适用费用","対象治療":"适用治疗","対象者要件":"对象条件","対象住宅":"适用住房","対象住宅要件":"住房对象条件","対象世帯":"适用家庭","注意":"注意","入居条件":"入住条件","年齢要件":"年龄条件","補助額区分（加算）":"补助加算","補助対象期間":"补助适用期间"
+    },
+    "contacts": {
+      "こども家庭課":"儿童家庭课","各総合支所 地域政策課":"各综合支所地区政策课","健康推進課":"健康推进课","健康推進課 母子保健係":"健康推进课 母子保健组","建築指導課":"建筑指导课","産業立地・就業支援課":"产业立地・就业支援课","住宅政策課":"住房政策课","母子保健係":"母子保健组","豊田／豊浦／豊北 総合支所 地域政策課":"丰田／丰浦／丰北综合支所地区政策课","豊北総合支所 地域政策課":"丰北综合支所地区政策课"
+    }
   },
   "ko": {
     "app_title": "시모노세키시 보조금 요건 확인",
@@ -193,7 +207,13 @@
     "guideline_unavailable": "요강 PDF URL이 등록되지 않았습니다. 담당 부서에 확인해 주세요.",
     "print": "인쇄／PDF 저장",
     "data_notice": "이 앱의 정보는 2026년도 조사에 따른 참고 정보입니다. 최종 대상 여부는 각 담당 부서가 판단합니다. 반드시 최신 요강을 확인해 주세요.",
-    "data_version": "데이터 버전 {version} (갱신일: {date})"
+    "data_version": "데이터 버전 {version} (갱신일: {date})",
+    "groups": {
+      "その他":"기타 요건","移住元要件":"이주 전 지역 요건","学歴要件":"학력 요건","活動要件":"활동 요건","居住・転入要件":"거주・전입 요건","居住地域":"거주 지역","居住地要件":"거주지 요건","居住要件":"거주 요건","継続居住要件":"계속 거주 요건","限度":"한도","手続き":"절차","就業等要件":"취업 등 요건","就職・起業要件":"취업・창업 요건","住宅要件":"주택 요건","奨学金要件":"장학금 요건","食堂運営時":"식당 운영 시","申請者要件":"신청자 요건","申請前提":"신청 전제","申請単位":"신청 횟수","選考":"선정","窓口利用要件":"상담 창구 이용 요건","対象期間":"대상 기간","対象経費":"대상 경비","対象治療":"대상 치료","対象者要件":"대상자 요건","対象住宅":"대상 주택","対象住宅要件":"대상 주택 요건","対象世帯":"대상 가구","注意":"주의","入居条件":"입주 조건","年齢要件":"연령 요건","補助額区分（加算）":"추가 지원","補助対象期間":"보조 대상 기간"
+    },
+    "contacts": {
+      "こども家庭課":"아동가정과","各総合支所 地域政策課":"각 종합지소 지역정책과","健康推進課":"건강추진과","健康推進課 母子保健係":"건강추진과 모자보건계","建築指導課":"건축지도과","産業立地・就業支援課":"산업입지・취업지원과","住宅政策課":"주택정책과","母子保健係":"모자보건계","豊田／豊浦／豊北 総合支所 地域政策課":"도요타／도요우라／호호쿠 종합지소 지역정책과","豊北総合支所 地域政策課":"호호쿠 종합지소 지역정책과"
+    }
   },
   "vi": {
     "app_title": "Kiểm tra điều kiện trợ cấp Shimonoseki",
@@ -242,6 +262,12 @@
     "guideline_unavailable": "Chưa đăng ký URL PDF quy định. Vui lòng hỏi bộ phận phụ trách.",
     "print": "In／Lưu PDF",
     "data_notice": "Thông tin trong ứng dụng chỉ mang tính tham khảo, dựa trên khảo sát năm tài khóa 2026. Bộ phận phụ trách sẽ quyết định điều kiện cuối cùng. Luôn kiểm tra quy định mới nhất.",
-    "data_version": "Phiên bản dữ liệu {version} (cập nhật: {date})"
+    "data_version": "Phiên bản dữ liệu {version} (cập nhật: {date})",
+    "groups": {
+      "その他":"Điều kiện khác","移住元要件":"Nơi cư trú trước khi chuyển","学歴要件":"Học vấn","活動要件":"Điều kiện hoạt động","居住・転入要件":"Cư trú và chuyển đến","居住地域":"Khu vực cư trú","居住地要件":"Địa điểm cư trú","居住要件":"Điều kiện cư trú","継続居住要件":"Tiếp tục cư trú","限度":"Giới hạn","手続き":"Thủ tục","就業等要件":"Việc làm hoặc kinh doanh","就職・起業要件":"Việc làm・khởi nghiệp","住宅要件":"Điều kiện nhà ở","奨学金要件":"Học bổng","食堂運営時":"Khi vận hành bếp ăn","申請者要件":"Người nộp đơn","申請前提":"Điều kiện trước khi nộp","申請単位":"Số lần đăng ký","選考":"Xét chọn","窓口利用要件":"Lịch sử tư vấn","対象期間":"Thời gian áp dụng","対象経費":"Chi phí áp dụng","対象治療":"Điều trị áp dụng","対象者要件":"Điều kiện đối tượng","対象住宅":"Nhà ở áp dụng","対象住宅要件":"Điều kiện nhà ở áp dụng","対象世帯":"Hộ gia đình áp dụng","注意":"Lưu ý","入居条件":"Điều kiện vào ở","年齢要件":"Độ tuổi","補助額区分（加算）":"Khoản hỗ trợ bổ sung","補助対象期間":"Thời gian được hỗ trợ"
+    },
+    "contacts": {
+      "こども家庭課":"Phòng Trẻ em và Gia đình","各総合支所 地域政策課":"Phòng Chính sách Khu vực tại các chi nhánh","健康推進課":"Phòng Tăng cường Sức khỏe","健康推進課 母子保健係":"Phòng Tăng cường Sức khỏe, Bộ phận Sức khỏe Bà mẹ và Trẻ em","建築指導課":"Phòng Hướng dẫn Xây dựng","産業立地・就業支援課":"Phòng Hỗ trợ Địa điểm Công nghiệp và Việc làm","住宅政策課":"Phòng Chính sách Nhà ở","母子保健係":"Bộ phận Sức khỏe Bà mẹ và Trẻ em","豊田／豊浦／豊北 総合支所 地域政策課":"Phòng Chính sách Khu vực tại các chi nhánh Toyota/Toyoura/Hohoku","豊北総合支所 地域政策課":"Phòng Chính sách Khu vực, Chi nhánh Hohoku"
+    }
   }
 }
