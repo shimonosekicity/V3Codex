@@ -17,17 +17,13 @@
         <span class="brand-mark" aria-hidden="true">関</span>
         <span><strong data-i18n="app_title">下関市 補助金要件確認</strong><small data-i18n="staff_tool">窓口確認ツール</small></span>
       </button>
-      <label class="language-picker">
-        <span aria-hidden="true">🌐</span>
-        <span class="sr-only" data-i18n="language">言語</span>
-        <select id="language-select">
-          <option value="ja">日本語</option>
-          <option value="en">English</option>
-          <option value="zh">中文</option>
-          <option value="ko">한국어</option>
-          <option value="vi">Tiếng Việt</option>
-        </select>
-      </label>
+      <nav id="language-switcher" class="language-switcher" aria-label="Language / 言語切替">
+        <button class="language-button active" type="button" data-language="ja">日本語</button>
+        <button class="language-button" type="button" data-language="en">EN</button>
+        <button class="language-button" type="button" data-language="zh">中文</button>
+        <button class="language-button" type="button" data-language="ko">한국어</button>
+        <button class="language-button" type="button" data-language="vi">VI</button>
+      </nav>
     </div>
   </header>
 
@@ -49,6 +45,10 @@
         <h1 data-i18n="choose_title">確認する補助金を選んでください</h1>
         <p data-i18n="choose_intro">補助金名で検索するか、分野から絞り込めます。</p>
       </div>
+      <aside class="disclaimer" role="note">
+        <strong data-i18n="reference_notice">参考情報です</strong>
+        <span data-i18n="data_notice">最終的な対象可否は各担当課の判断によります。最新の要綱を必ずご確認ください。</span>
+      </aside>
       <div class="controls">
         <label class="search-box">
           <span class="sr-only" data-i18n="search_label">補助金名で検索</span>
@@ -73,6 +73,15 @@
         <button class="detail-tab" type="button" data-panel="info-panel" data-i18n="official_info">詳細・要綱</button>
       </nav>
       <div id="check-panel" class="detail-panel">
+        <div class="progress-wrap" aria-live="polite">
+          <div class="progress-label">
+            <span data-i18n="check_progress">確認の進捗</span>
+            <strong id="progress-text">0 / 0</strong>
+          </div>
+          <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progress-fill" class="progress-fill"></span>
+          </div>
+        </div>
         <div id="result-banner" class="result-banner hidden" role="status" aria-live="assertive"></div>
         <div id="requirements-list"></div>
         <button id="restart-button" class="button secondary full-width" type="button" data-i18n="restart">最初からやり直す</button>

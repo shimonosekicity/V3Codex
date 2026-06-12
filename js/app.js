@@ -21,11 +21,11 @@ async function init() {
 }
 
 function bindStaticEvents() {
-  $("#language-select").addEventListener("change", (event) => {
-    state.language = event.target.value;
+  $$(".language-button").forEach((button) => button.addEventListener("click", () => {
+    state.language = button.dataset.language;
     document.documentElement.lang = state.language;
     renderAll();
-  });
+  }));
   $("#search-input").addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLocaleLowerCase();
     renderList();
@@ -96,6 +96,11 @@ function groupText(value) {
 function applyTranslations() {
   $$("[data-i18n]").forEach((element) => { element.textContent = t(element.dataset.i18n); });
   $$("[data-i18n-placeholder]").forEach((element) => { element.placeholder = t(element.dataset.i18nPlaceholder); });
+  $$(".language-button").forEach((button) => {
+    const active = button.dataset.language === state.language;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
 }
 
 function renderAll() {
@@ -150,7 +155,9 @@ function renderList() {
     <button class="subsidy-card" type="button" data-id="${escapeHtml(item.id)}" data-category="${escapeHtml(item.category)}">
       <span class="card-top">
         <span class="category-label">${escapeHtml(t(categoryKey(item.category)))}</span>
-        ${item.status === "closed" ? `<span class="closed-badge">${escapeHtml(t("closed"))}</span>` : ""}
+        ${item.status === "closed"
+          ? `<span class="closed-badge">${escapeHtml(t("closed"))}</span>`
+          : `<span class="active-badge">${escapeHtml(t("active"))}</span>`}
       </span>
       <h2>${escapeHtml(localized(item.name))}</h2>
       <p>${escapeHtml(localized(item.summary))}</p>
@@ -158,6 +165,7 @@ function renderList() {
         <span class="amount">${escapeHtml(t("amount"))}: ${escapeHtml(localized(item.amount))}</span>
         <span>${escapeHtml(t("contact"))}: ${escapeHtml(contactText(item.contact.dept || item.contact.name))}</span>
       </span>
+      <span class="card-arrow" aria-hidden="true">›</span>
     </button>`).join("");
   $$(".subsidy-card").forEach((card) => card.addEventListener("click", () => selectSubsidy(card.dataset.id)));
 }
@@ -250,7 +258,12 @@ function updateResult() {
   const banner = $("#result-banner");
   const failed = Object.values(state.answers).find((answer) => answer.disqualify);
   const required = state.selected.requirements.filter((item) => item.required);
+  const answeredRequired = required.filter((item) => state.answers[item.id]).length;
   const completed = required.every((item) => state.answers[item.id]);
+  const percent = required.length ? Math.round((answeredRequired / required.length) * 100) : 0;
+  $("#progress-text").textContent = `${answeredRequired} / ${required.length}`;
+  $("#progress-fill").style.width = `${percent}%`;
+  $("#progress-bar").setAttribute("aria-valuenow", String(percent));
   banner.className = "result-banner";
   if (failed) {
     const failedRequirement = state.selected.requirements.find((item) => item.id === failed.requirementId);
