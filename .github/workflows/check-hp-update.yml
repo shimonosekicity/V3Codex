@@ -1,0 +1,68 @@
+name: Check official pages for updates
+
+on:
+  schedule:
+    - cron: "20 0 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check source pages
+        run: python scripts/check_hp.py
+
+      - name: Save current hashes
+        run: |
+          if ! git diff --quiet -- scripts/hashes.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add scripts/hashes.json
+            git commit -m "Update monitored page hashes"
+            git push
+          fi
+
+      - name: Create issue when changes are detected
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path("scripts/changed_urls.json").read_text(encoding="utf-8"))
+          changed = result.get("changed", [])
+          errors = result.get("errors", [])
+          if not changed and not errors:
+              raise SystemExit(0)
+          lines = [
+              "公式HPに変更または取得エラーの可能性があります。",
+              "",
+              "実際のデータは自動更新しません。要綱と公式ページを人が確認し、必要な場合のみスプレッドシートと `data/subsidies.json` を更新してください。",
+          ]
+          if changed:
+              lines += ["", "## 変更候補", *[f"- {url}" for url in changed]]
+          if errors:
+              lines += ["", "## 取得エラー", *[f"- {item['url']}: `{item['error']}`" for item in errors]]
+          Path("issue-body.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+          PY
+          if [ -f issue-body.md ]; then
+            gh issue create \
+              --title "補助金公式HPの変更候補を確認してください" \
+              --body-file issue-body.md \
+              --label "data-review" 2>/dev/null || \
+            gh issue create \
+              --title "補助金公式HPの変更候補を確認してください" \
+              --body-file issue-body.md
+          fi

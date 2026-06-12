@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075985">
+  <meta name="description" content="下関市の移住・定住支援補助金の要件確認を支援する職員向けアプリです。">
+  <title>下関市 補助金要件確認</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <button id="home-button" class="brand" type="button" aria-label="トップへ戻る">
+        <span class="brand-mark" aria-hidden="true">関</span>
+        <span><strong data-i18n="app_title">下関市 補助金要件確認</strong><small data-i18n="staff_tool">窓口確認ツール</small></span>
+      </button>
+      <label class="language-picker">
+        <span aria-hidden="true">🌐</span>
+        <span class="sr-only" data-i18n="language">言語</span>
+        <select id="language-select">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="ko">한국어</option>
+          <option value="vi">Tiếng Việt</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="loading-view" class="status-page" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p data-i18n="loading">データを読み込んでいます</p>
+    </section>
+
+    <section id="error-view" class="status-page hidden" role="alert">
+      <h1 data-i18n="load_error">データを読み込めませんでした</h1>
+      <p data-i18n="serve_note">Webサーバー経由で開くか、管理者にご連絡ください。</p>
+      <button id="retry-button" class="button primary" type="button" data-i18n="retry">再読み込み</button>
+    </section>
+
+    <section id="list-view" class="view hidden">
+      <div class="hero">
+        <p class="eyebrow" data-i18n="eyebrow">来庁者と一緒に、1項目ずつ確認</p>
+        <h1 data-i18n="choose_title">確認する補助金を選んでください</h1>
+        <p data-i18n="choose_intro">補助金名で検索するか、分野から絞り込めます。</p>
+      </div>
+      <div class="controls">
+        <label class="search-box">
+          <span class="sr-only" data-i18n="search_label">補助金名で検索</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" autocomplete="off" data-i18n-placeholder="search">
+        </label>
+        <div id="category-tabs" class="category-tabs" role="group" aria-label="分野"></div>
+      </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <div id="subsidy-list" class="card-list"></div>
+      <div id="empty-state" class="empty-state hidden">
+        <strong data-i18n="no_results">該当する補助金がありません</strong>
+        <p data-i18n="try_other">検索語や分野を変更してください。</p>
+      </div>
+    </section>
+
+    <section id="detail-view" class="view detail-view hidden">
+      <button id="back-button" class="back-button" type="button"><span aria-hidden="true">‹</span> <span data-i18n="back">一覧に戻る</span></button>
+      <div id="detail-header"></div>
+      <nav class="detail-tabs" aria-label="詳細メニュー">
+        <button class="detail-tab active" type="button" data-panel="check-panel" data-i18n="check_requirements">要件を確認</button>
+        <button class="detail-tab" type="button" data-panel="info-panel" data-i18n="official_info">詳細・要綱</button>
+      </nav>
+      <div id="check-panel" class="detail-panel">
+        <div id="result-banner" class="result-banner hidden" role="status" aria-live="assertive"></div>
+        <div id="requirements-list"></div>
+        <button id="restart-button" class="button secondary full-width" type="button" data-i18n="restart">最初からやり直す</button>
+      </div>
+      <div id="info-panel" class="detail-panel hidden"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="data-notice"></p>
+    <p id="data-version"></p>
+  </footer>
+</body>
+</html>
