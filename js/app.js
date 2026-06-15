@@ -361,6 +361,7 @@ function renderInfo() {
   const item = state.selected;
   const grouped = groupBy(item.requirements, (requirement) => requirement.group);
   $("#info-panel").innerHTML = `
+    ${requiredDocumentsHtml(item)}
     <article class="info-card">
       <h2>${escapeHtml(t("official_requirements"))}</h2>
       ${state.language !== "ja" ? `<p class="translation-note">${escapeHtml(t("official_japanese_note"))}</p>` : ""}
@@ -384,6 +385,37 @@ function renderInfo() {
     </article>
     <button class="button primary full-width print-hide" type="button" onclick="window.print()">${escapeHtml(t("print"))}</button>
     <p class="translation-note">${escapeHtml(t("data_notice"))}</p>`;
+}
+
+function requiredDocumentsHtml(item) {
+  const documents = item.requiredDocuments;
+  if (!documents?.sections?.length) return "";
+  return `
+    <article class="info-card documents-card">
+      <div class="documents-heading">
+        <span class="documents-icon" aria-hidden="true">✓</span>
+        <div>
+          <h2>${escapeHtml(t("required_documents"))}</h2>
+          <p>${escapeHtml(t("documents_intro"))}</p>
+        </div>
+      </div>
+      ${documents.notice ? `<p class="documents-notice"><strong>${escapeHtml(t("important"))}:</strong> ${escapeHtml(localized(documents.notice))}</p>` : ""}
+      <div class="document-sections">
+        ${documents.sections.map((section) => `
+          <section class="document-section">
+            <h3>${escapeHtml(localized(section.title))}</h3>
+            <ul class="document-list">
+              ${section.items.map((document) => `
+                <li>
+                  <span class="document-check" aria-hidden="true"></span>
+                  <span>${escapeHtml(localized(document.text))}</span>
+                  ${document.conditional ? `<span class="conditional-badge">${escapeHtml(t("if_applicable"))}</span>` : ""}
+                </li>`).join("")}
+            </ul>
+          </section>`).join("")}
+      </div>
+      <p class="documents-footnote">${escapeHtml(t("documents_check_note"))}</p>
+    </article>`;
 }
 
 function restartCheck() {

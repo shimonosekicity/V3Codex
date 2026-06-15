@@ -1,6 +1,6 @@
 {
-  "version": "2026.06.12",
-  "lastUpdated": "2026-06-12",
+  "version": "3.3.0",
+  "lastUpdated": "2026-06-15",
   "subsidies": [
     {
       "id": "ijuu-shienkin",
@@ -173,7 +173,106 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "申請経路（就業・テレワーク・専門人材・創業）により様式と添付書類が異なります。申請前にLiveHUBしものせきへご相談ください。",
+          "en": "The format and attached documents differ depending on the application route (employment, telework, professional human resources, business start-up). Please consult LiveHUB Shimonoseki before applying.",
+          "zh": "根据申请途径（就业、远程办公、专业人力资源、创业），格式和随附文件有所不同。申请前请咨询LiveHUB下关。",
+          "ko": "신청 경로(취업·텔레워크·전문 인재·창업)에 의해 양식과 첨부 서류가 다릅니다. 신청전에 LiveHUB 시모세키에 상담해 주십시오.",
+          "vi": "Định dạng và tài liệu đính kèm khác nhau tùy theo lộ trình nộp đơn (việc làm, làm việc từ xa, nhân sự chuyên nghiệp, khởi nghiệp kinh doanh). Vui lòng tham khảo LiveHUB Shimonoseki trước khi đăng ký."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "申請時",
+              "en": "When applying",
+              "zh": "申请时",
+              "ko": "신청 시",
+              "vi": "Khi đăng ký"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "該当する支給申請書（様式第1-1号～第1-4号）と別紙",
+                  "en": "Applicable payment application form (Form No. 1-1 to No. 1-4) and attached sheet",
+                  "zh": "适用付款申请表（表号1-1至表1-4）及附表",
+                  "ko": "해당하는 지급 신청서(양식 제1-1호~제1-4호)와 별지",
+                  "vi": "Mẫu đơn xin thanh toán áp dụng (Mẫu số 1-1 đến số 1-4) và bảng đính kèm"
+                }
+              },
+              {
+                "text": {
+                  "ja": "就業証明書（就業・テレワーク・専門人材の該当様式）",
+                  "en": "Employment certificate (appropriate form for employment/telework/specialist personnel)",
+                  "zh": "就业证明（适用于就业/远程工作/专业人员的表格）",
+                  "ko": "취업 증명서(취업·텔레워크·전문 인력의 해당 양식)",
+                  "vi": "Giấy chứng nhận việc làm (mẫu phù hợp cho việc làm/làm việc từ xa/nhân viên chuyên môn)"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "暴力団排除誓約書（様式第3号）",
+                  "en": "Organized Crime Elimination Pledge (Form No. 3)",
+                  "zh": "消除有组织犯罪承诺（表 3）",
+                  "ko": "폭력단 배제 서약서(양식 제3호)",
+                  "vi": "Cam kết xóa bỏ tội phạm có tổ chức (Mẫu số 3)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住民票・戸籍の附票など、移住元と移住先を確認できる書類",
+                  "en": "Documents that can confirm the origin and destination of migration, such as residence card and family register.",
+                  "zh": "在留卡、户口本等可确认移居地和目的地的文件。",
+                  "ko": "주민표·호적의 부표 등, 이주원과 이주처를 확인할 수 있는 서류",
+                  "vi": "Các tài liệu có thể xác nhận nguồn gốc và đích đến của việc di cư, chẳng hạn như thẻ cư trú và sổ hộ khẩu."
+                }
+              },
+              {
+                "text": {
+                  "ja": "創業支援金の交付決定を確認できる書類",
+                  "en": "Document that confirms the decision to issue start-up support funds",
+                  "zh": "确认发放创业扶持资金决定的文件",
+                  "ko": "창업 지원금의 교부 결정을 확인할 수 있는 서류",
+                  "vi": "Văn bản xác nhận quyết định phát hành quỹ hỗ trợ khởi nghiệp"
+                },
+                "conditional": true
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "交付決定後",
+              "en": "After issuance decision",
+              "zh": "发行决定后",
+              "ko": "교부 결정 후",
+              "vi": "Sau khi có quyết định ban hành"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付請求書（様式第5号）",
+                  "en": "Issuance request form (Form No. 5)",
+                  "zh": "发行申请表（表5）",
+                  "ko": "교부 청구서(양식 제5호)",
+                  "vi": "Mẫu đề nghị cấp (Mẫu số 5)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "申請内容に変更がある場合は変更届出書（様式第6号）",
+                  "en": "If there is a change in the application details, please submit a change notification form (Form No. 6)",
+                  "zh": "如申请资料有变更，请提交变更通知表（表6）",
+                  "ko": "신청 내용에 변경이 있는 경우는 변경 신고서(양식 제6호)",
+                  "vi": "Nếu có thay đổi về chi tiết đơn đăng ký, vui lòng gửi mẫu thông báo thay đổi (Mẫu số 6)"
+                },
+                "conditional": true
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "yamaguchi-telework",
@@ -306,7 +405,96 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "就業・テレワークなどの区分で証明書が異なります。申請前にLiveHUBしものせきへ必要書類をご確認ください。",
+          "en": "Certificate differs depending on classification such as employment/telework. Please check the required documents with LiveHUB Shimonoseki before applying.",
+          "zh": "证书根据就业/远程工作等分类而有所不同。申请前请通过LiveHUB下关确认所需材料。",
+          "ko": "취업/재택근무 등 분류에 따라 자격증이 다릅니다. 신청하기 전에 LiveHUB Shimonoseki에 필요한 서류를 확인하십시오.",
+          "vi": "Chứng chỉ khác nhau tùy thuộc vào phân loại, chẳng hạn như việc làm/làm việc từ xa. Vui lòng kiểm tra các tài liệu cần thiết với LiveHUB Shimonoseki trước khi đăng ký."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "申請時",
+              "en": "When applying",
+              "zh": "申请时",
+              "ko": "신청시",
+              "vi": "Khi đăng ký"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付申請書（下関市様式第1号）",
+                  "en": "Issuance application form (Shimonoseki City Form No. 1)",
+                  "zh": "发行申请书（下关市表格第1号）",
+                  "ko": "교부신청서(시모노세키시 서식 제1호)",
+                  "vi": "Đơn xin cấp giấy phép (Mẫu số 1 của Thành phố Shimonoseki)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "就業証明書（下関市様式第2号）",
+                  "en": "Employment certificate (Shimonoseki City Form No. 2)",
+                  "zh": "就业证明书（下关市表格第2号）",
+                  "ko": "재직증명서(시모노세키시 서식 제2호)",
+                  "vi": "Giấy chứng nhận việc làm (Mẫu số 2 của Thành phố Shimonoseki)"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "就業証明書【テレワーク】（下関市様式第3号）",
+                  "en": "Employment certificate [telework] (Shimonoseki City Form No. 3)",
+                  "zh": "就业证明书[远程办公]（下关市表格第3号）",
+                  "ko": "재직증명서[재택근무](시모노세키시 서식 제3호)",
+                  "vi": "Giấy chứng nhận việc làm [làm việc từ xa] (Mẫu số 3 của Thành phố Shimonoseki)"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "住民票・戸籍の附票など、転入前後の居住地を確認できる書類",
+                  "en": "Documents that can confirm your place of residence before and after moving in, such as residence card and family register certificate",
+                  "zh": "入住前后可确认居住地的文件，如居留卡、户口簿等",
+                  "ko": "거주카드, 호적증명서 등 입주 전후에 거주지를 확인할 수 있는 서류",
+                  "vi": "Các giấy tờ có thể xác nhận nơi cư trú của bạn trước và sau khi chuyển đến, chẳng hạn như thẻ cư trú và sổ hộ khẩu"
+                }
+              },
+              {
+                "text": {
+                  "ja": "振込先口座を確認できる書類",
+                  "en": "Documents that can confirm the transfer account",
+                  "zh": "可以确认转账账户的文件",
+                  "ko": "이체계좌를 확인할 수 있는 서류",
+                  "vi": "Giấy tờ có thể xác nhận tài khoản chuyển khoản"
+                }
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "交付決定後",
+              "en": "After issuance decision",
+              "zh": "发行决定后",
+              "ko": "발행 결정 후",
+              "vi": "Sau khi có quyết định ban hành"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付請求書（下関市様式第5号）",
+                  "en": "Issuance request form (Shimonoseki City Form No. 5)",
+                  "zh": "发行申请书（下关市表格第5号）",
+                  "ko": "교부신청서(시모노세키시 서식 제5호)",
+                  "vi": "Mẫu yêu cầu cấp phát (Mẫu số 5 của Thành phố Shimonoseki)"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "kurashi-support-rent",
@@ -413,7 +601,94 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "初回申請は移住した日から6か月以内です。家賃を支払ったことが分かる書類は請求時まで保管してください。",
+          "en": "The first application must be made within 6 months from the date of immigration. Please keep any documents showing that you have paid the rent until you make a claim.",
+          "zh": "首次申请必须在移民之日起 6 个月内提出。请保留所有证明您已支付租金的文件，直至您提出索赔。",
+          "ko": "첫 신청은 이주한 날로부터 6개월 이내입니다. 집세를 지불한 것을 알 수 있는 서류는 청구시까지 보관해 주세요.",
+          "vi": "Đơn xin đầu tiên phải được nộp trong vòng 6 tháng kể từ ngày nhập cư. Vui lòng giữ lại bất kỳ tài liệu nào cho thấy bạn đã trả tiền thuê nhà cho đến khi bạn nộp đơn yêu cầu bồi thường."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "交付申請時",
+              "en": "When applying for issuance",
+              "zh": "申请发行时",
+              "ko": "교부 신청 시",
+              "vi": "Khi đăng ký cấp"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付申請書（第1号様式）",
+                  "en": "Issuance application form (Form 1)",
+                  "zh": "签发申请表（表1）",
+                  "ko": "교부 신청서(제1호 양식)",
+                  "vi": "Đơn đề nghị cấp giấy phép (Mẫu 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "賃貸借契約書の写し",
+                  "en": "Copy of rental agreement",
+                  "zh": "租赁协议副本",
+                  "ko": "임대차 계약서 사본",
+                  "vi": "Bản sao hợp đồng thuê nhà"
+                }
+              },
+              {
+                "text": {
+                  "ja": "移住後の住民票の写し",
+                  "en": "Copy of resident record after moving",
+                  "zh": "搬家后的住民票复印件",
+                  "ko": "이주 후 주민표 사본",
+                  "vi": "Bản sao hồ sơ cư trú sau khi chuyển đi"
+                }
+              },
+              {
+                "text": {
+                  "ja": "市税の滞納がないことが分かる書類",
+                  "en": "Document showing that there is no delinquency of city tax",
+                  "zh": "证明没有拖欠城市税的文件",
+                  "ko": "시세의 체납이 없는 것을 알 수 있는 서류",
+                  "vi": "Tài liệu chứng minh không có khoản nợ thuế thành phố nào quá hạn"
+                }
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "補助金請求時",
+              "en": "When requesting subsidy",
+              "zh": "申请补贴时",
+              "ko": "보조금 청구 시",
+              "vi": "Khi yêu cầu trợ cấp"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "請求書（第5号様式）",
+                  "en": "Invoice (Form No. 5)",
+                  "zh": "发票（表格 5 号）",
+                  "ko": "인보이스(제5호 양식)",
+                  "vi": "Hoá đơn (Mẫu số 5)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "家賃等の支払いを証する書類",
+                  "en": "Documents proving payment of rent, etc.",
+                  "zh": "租金等的支付证明文件",
+                  "ko": "임대료 등의 지불을 증명하는 서류",
+                  "vi": "Giấy tờ chứng minh đã thanh toán tiền thuê nhà, v.v."
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "teiju-shoreikin",
@@ -503,7 +778,94 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "定住奨励金と出産祝い金では申請様式が異なります。添付書類の最終確認は各申請書で行ってください。",
+          "en": "The application formats are different for the domicile incentive grant and the birth gift grant. Please perform the final confirmation of attached documents on each application form.",
+          "zh": "户籍奖励金和出生礼金金的申请格式不同。请对每份申请表上所附文件进行最终确认。",
+          "ko": "정착 장려금과 출산 축하금은 신청 양식이 다릅니다. 첨부 서류의 최종 확인은 각 신청서에서 실시해 주세요.",
+          "vi": "Các hình thức đăng ký khác nhau đối với trợ cấp khuyến khích cư trú và trợ cấp quà tặng sinh con. Vui lòng thực hiện xác nhận cuối cùng các tài liệu đính kèm trên mỗi mẫu đơn."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "定住奨励金の申請時",
+              "en": "When applying for a settlement incentive grant",
+              "zh": "申请定居激励补助金时",
+              "ko": "정주 장려금 신청 시",
+              "vi": "Khi nộp đơn xin trợ cấp ưu đãi định cư"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "定住奨励金支給申請書（様式第1号）",
+                  "en": "Application for settlement incentive grant (Form No. 1)",
+                  "zh": "定居奖励补助金申请表（表 1）",
+                  "ko": "정주 장려금 지급 신청서(양식 제1호)",
+                  "vi": "Đơn xin hỗ trợ ưu đãi định cư (Mẫu số 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "世帯全員の住民票など、対象地域に6か月以上居住したことが分かる書類",
+                  "en": "Documents showing that you have lived in the target area for 6 months or more, such as resident records for all members of the household",
+                  "zh": "证明您在目标地区居住了6个月或以上的文件，例如所有家庭成员的居民记录",
+                  "ko": "가구 전원의 주민표 등 대상 지역에 6개월 이상 거주한 것을 알 수 있는 서류",
+                  "vi": "Tài liệu chứng minh rằng bạn đã sống ở khu vực mục tiêu từ 6 tháng trở lên, chẳng hạn như hồ sơ cư trú của tất cả các thành viên trong gia đình"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住宅の新築・購入・増築・賃借を確認できる契約書等の写し",
+                  "en": "Copy of contract, etc. that confirms new construction, purchase, extension, or rental of a house",
+                  "zh": "确认新建、购买、扩建或租赁房屋的合同副本等",
+                  "ko": "주택의 신축 · 구입 · 증축 · 임차를 확인할 수있는 계약서 등의 사본",
+                  "vi": "Bản sao hợp đồng, v.v. xác nhận việc xây dựng mới, mua, gia hạn hoặc cho thuê nhà"
+                }
+              },
+              {
+                "text": {
+                  "ja": "転入前の住所履歴を確認できる戸籍の附票等",
+                  "en": "Family register slip, etc. that allows you to check your address history before moving in",
+                  "zh": "户口簿等，可让您在入住前检查您的地址历史记录",
+                  "ko": "전입 전의 주소 이력을 확인할 수 있는 호적의 부표 등",
+                  "vi": "Phiếu đăng ký gia đình, v.v. cho phép bạn kiểm tra lịch sử địa chỉ của mình trước khi chuyển đến"
+                }
+              },
+              {
+                "text": {
+                  "ja": "市税の滞納がないことが分かる書類",
+                  "en": "Document showing that there is no delinquency of city tax",
+                  "zh": "证明没有拖欠城市税的文件",
+                  "ko": "시세의 체납이 없는 것을 알 수 있는 서류",
+                  "vi": "Tài liệu chứng minh không có khoản nợ thuế thành phố nào quá hạn"
+                }
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "支給決定後",
+              "en": "After payment decision",
+              "zh": "付款决定后",
+              "ko": "지급 결정 후",
+              "vi": "Sau khi quyết định thanh toán"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "奨励金等支給請求書（様式第4号）",
+                  "en": "Incentive payment request form (Form No. 4)",
+                  "zh": "奖励付款申请表（表 4）",
+                  "ko": "장려금 등 지급 청구서(양식 제4호)",
+                  "vi": "Mẫu yêu cầu thanh toán ưu đãi (Mẫu số 4)"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "scholarship-repayment",
@@ -636,7 +998,125 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "補助申請の前に候補者登録（エントリー）が必要です。就職・転入・起業の区分に応じた様式を使用してください。",
+          "en": "Candidate registration (entry) is required before applying for assistance. Please use the format that corresponds to the classification of employment, transfer, or starting a business.",
+          "zh": "申请援助之前需要候选人注册（参赛）。请使用与就业、调动或创业分类相对应的格式。",
+          "ko": "지원을 신청하기 전에 후보자 등록(참가)이 필요합니다. 취업, 전근, 창업의 구분에 해당하는 형식을 사용하시기 바랍니다.",
+          "vi": "Yêu cầu đăng ký ứng viên (nhập) trước khi đăng ký hỗ trợ. Vui lòng sử dụng định dạng tương ứng với phân loại việc làm, thuyên chuyển hoặc bắt đầu kinh doanh."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "候補者登録時",
+              "en": "When registering as a candidate",
+              "zh": "注册为候选人时",
+              "ko": "후보자 등록 시",
+              "vi": "Khi đăng ký làm ứng viên"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "候補者認定申請書（新卒者・転入者・起業者の該当様式）",
+                  "en": "Candidate Certification Application Form (applicable form for new graduates, transferees, and entrepreneurs)",
+                  "zh": "候选人认证申请表（适用于应届毕业生、调动者和企业家）",
+                  "ko": "응시자격인증신청서 (신규졸업생, 편입생, 창업자 적용양식)",
+                  "vi": "Mẫu đơn xin cấp chứng chỉ ứng viên (mẫu áp dụng cho sinh viên mới tốt nghiệp, người chuyển trường và doanh nhân)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "在学証明書または卒業を確認できる書類",
+                  "en": "Certificate of enrollment or document confirming graduation",
+                  "zh": "在学证明或毕业确认文件",
+                  "ko": "재학증명서 또는 졸업을 확인할 수 있는 서류",
+                  "vi": "Giấy chứng nhận nhập học hoặc giấy xác nhận tốt nghiệp"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "奨学金の貸与を確認できる書類",
+                  "en": "Documents that can confirm scholarship loan",
+                  "zh": "可以确认奖学金贷款的文件",
+                  "ko": "장학금 대출 사실을 확인할 수 있는 서류",
+                  "vi": "Giấy tờ xác nhận khoản vay học bổng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住所履歴や就業・起業予定を確認できる書類",
+                  "en": "Documents that can confirm address history and employment/startup plans",
+                  "zh": "可以确认地址历史和就业/创业计划的文件",
+                  "ko": "주소 이력 및 취업/창업 계획을 확인할 수 있는 서류",
+                  "vi": "Tài liệu có thể xác nhận lịch sử địa chỉ và kế hoạch việc làm/khởi nghiệp"
+                },
+                "conditional": true
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "補助金申請時",
+              "en": "When applying for subsidy",
+              "zh": "申请补贴时",
+              "ko": "지원금 신청 시",
+              "vi": "Khi nộp đơn xin trợ cấp"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "雇用証明書（就職した方）",
+                  "en": "Employment certificate (for those who have found employment)",
+                  "zh": "就业证明（适用于已找到工作的人）",
+                  "ko": "재직증명서(취업을 한 자에 한함)",
+                  "vi": "Giấy chứng nhận việc làm (dành cho người đã tìm được việc làm)"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "登記事項全部証明書等の起業を確認できる書類（起業した方）",
+                  "en": "All registered information Documents that can confirm business start-up such as certificates (for those who have started a business)",
+                  "zh": "所有注册信息 证明书等可以确认创业的文件（对于已经创业的人）",
+                  "ko": "등록된 모든 사항 증명서 등 창업을 확인할 수 있는 서류(창업을 한 자에 한함)",
+                  "vi": "Tất cả thông tin đã đăng ký Các tài liệu có thể xác nhận khởi nghiệp kinh doanh như chứng chỉ (dành cho người đã khởi nghiệp)"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "発行後3か月以内の住民票の写し",
+                  "en": "Copy of residence card issued within 3 months",
+                  "zh": "3个月内签发的居留卡复印件",
+                  "ko": "3개월 이내 발급된 체류카드 사본",
+                  "vi": "Bản sao thẻ cư trú cấp trong vòng 3 tháng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "奨学金返還証明書など返還状況が分かる書類",
+                  "en": "Documents showing the refund status such as scholarship return certificate",
+                  "zh": "奖学金返还证明等显示退款情况的文件",
+                  "ko": "장학금 반환증명서 등 환불현황을 확인할 수 있는 서류",
+                  "vi": "Các giấy tờ thể hiện tình trạng hoàn tiền như giấy hoàn trả học bổng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "市税の滞納がないことを証する書類",
+                  "en": "Document proving that there is no delinquency of city tax",
+                  "zh": "证明没有拖欠城市税的文件",
+                  "ko": "시세 체납이 없음을 입증하는 서류",
+                  "vi": "Tài liệu chứng minh không nợ thuế thành phố"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "housing-acquisition",
@@ -798,7 +1278,178 @@
           ],
           "required": false
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "住宅の建築・購入契約を締結する前に申請し、交付決定を受ける必要があります。",
+          "en": "You must apply and receive a decision on the grant before concluding a contract for construction or purchase of a house.",
+          "zh": "您必须在签订房屋建造或购买合同之前申请并收到补助金决定。",
+          "ko": "주택 건축 및 구매 계약을 체결하기 전에 신청하여 교부 결정을 받아야 합니다.",
+          "vi": "Bạn phải nộp đơn và nhận được quyết định về khoản trợ cấp trước khi ký kết hợp đồng xây dựng hoặc mua nhà."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "契約前の交付申請時",
+              "en": "When applying for issuance before contract",
+              "zh": "签约前申请签发时",
+              "ko": "계약 전 교부 신청 시",
+              "vi": "Khi đăng ký phát hành trước hợp đồng"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付申請書（市外転入者用：様式第1号の1／市内転居者用：様式第1号の2）",
+                  "en": "Issuance application form (For those moving outside the city: Form No. 1-1 / For those moving within the city: Form No. 1-2)",
+                  "zh": "发行申请书（在市外迁入者：表1-1号/在市内迁入者：表1-2号）",
+                  "ko": "교부 신청서(시외 전입자용:양식 제1호의 1/시내 전거자용:양식 제1호의 2)",
+                  "vi": "Đơn đề nghị cấp giấy phép (Đối với người di chuyển ngoài thành phố: Mẫu số 1-1 / Đối với người di chuyển trong thành phố: Mẫu số 1-2)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住所要件を確認できる戸籍の附票等",
+                  "en": "Attachment of family register etc. that can confirm address requirements",
+                  "zh": "可以确认地址要求的户口簿等的附件",
+                  "ko": "주소 요건을 확인할 수 있는 호적의 부표 등",
+                  "vi": "Đính kèm sổ đăng ký gia đình, v.v. có thể xác nhận các yêu cầu về địa chỉ"
+                }
+              },
+              {
+                "text": {
+                  "ja": "転居予定者全員の住民票の写し",
+                  "en": "Copies of resident records of all those planning to move",
+                  "zh": "所有计划搬迁者的居民记录副本",
+                  "ko": "이사 예정자 전원의 주민표 사본",
+                  "vi": "Bản sao hồ sơ cư trú của tất cả những người dự định chuyển đi"
+                }
+              },
+              {
+                "text": {
+                  "ja": "規模と費用が分かる見積書等",
+                  "en": "Estimates showing scale and cost",
+                  "zh": "显示规模和成本的估算",
+                  "ko": "규모와 비용을 알 수있는 견적서 등",
+                  "vi": "Ước tính thể hiện quy mô và chi phí"
+                }
+              },
+              {
+                "text": {
+                  "ja": "引渡予定時期または住宅の完成時期が分かる書類",
+                  "en": "Document showing the scheduled delivery date or completion date of the house",
+                  "zh": "显示房屋预定交付日期或竣工日期的文件",
+                  "ko": "인도 예정 시기 또는 주택 완성 시기를 알 수 있는 서류",
+                  "vi": "Tài liệu thể hiện ngày giao nhà dự kiến hoặc ngày hoàn thiện căn nhà"
+                }
+              },
+              {
+                "text": {
+                  "ja": "下関市税の滞納がないことを証する書類",
+                  "en": "Document proving that there is no delinquent payment of Shimonoseki city tax",
+                  "zh": "无拖欠下关市税的证明材料",
+                  "ko": "시모노세키시 세의 체납이 없음을 증명하는 서류",
+                  "vi": "Giấy tờ chứng minh không nợ thuế thành phố Shimonoseki"
+                }
+              },
+              {
+                "text": {
+                  "ja": "三世代同居・近居を確認する住民票と戸籍",
+                  "en": "Resident record and family register to confirm three generations living together/nearby",
+                  "zh": "居民户口簿和户口簿，以确认共同/附近居住的三代人",
+                  "ko": "3세대 동거·근거를 확인하는 주민표와 호적",
+                  "vi": "Sổ hộ khẩu và sổ hộ khẩu xác nhận ba thế hệ cùng chung sống/gần nhau"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "中古住宅の耐震性を確認できる書類",
+                  "en": "Documents that can confirm the earthquake resistance of a used home",
+                  "zh": "可以确认二手住宅抗震性的文件",
+                  "ko": "중고 주택의 내진성을 확인할 수 있는 서류",
+                  "vi": "Tài liệu có thể xác nhận khả năng chống động đất của nhà đã qua sử dụng"
+                },
+                "conditional": true
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "住宅取得完了後",
+              "en": "After completion of housing acquisition",
+              "zh": "房屋征收完成后",
+              "ko": "주택 취득 완료 후",
+              "vi": "Sau khi hoàn tất việc mua lại nhà ở"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "完了報告書（様式第7号）",
+                  "en": "Completion report (Form No. 7)",
+                  "zh": "完成报告（表 7）",
+                  "ko": "완료 보고서(양식 제7호)",
+                  "vi": "Báo cáo hoàn thành (Mẫu số 7)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "取得した住宅へ異動した方の住民票の写し",
+                  "en": "Copy of resident record of person who moved to acquired housing",
+                  "zh": "迁入已购住房者的住民票复印件",
+                  "ko": "취득한 주택으로 이동 한 사람의 주민표 사본",
+                  "vi": "Bản sao hồ sơ cư trú của người chuyển đến mua nhà ở"
+                }
+              },
+              {
+                "text": {
+                  "ja": "建築工事請負契約書または譲渡契約書の写し",
+                  "en": "Copy of construction contract or assignment contract",
+                  "zh": "施工合同或转让合同副本",
+                  "ko": "건축 공사 계약 계약서 또는 양도 계약서 사본",
+                  "vi": "Bản sao hợp đồng xây dựng hoặc hợp đồng chuyển nhượng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住宅の配置図・各階平面図",
+                  "en": "House layout plan/floor plan of each floor",
+                  "zh": "房屋布局图/各层平面图",
+                  "ko": "주택 배치도 · 각 층 평면도",
+                  "vi": "Sơ đồ bố trí nhà/sơ đồ tầng từng tầng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "代金の支払完了を証する書類",
+                  "en": "Document proving the completion of payment",
+                  "zh": "付款完成证明文件",
+                  "ko": "대금 결제 완료를 증명하는 서류",
+                  "vi": "Chứng từ chứng minh việc hoàn tất thanh toán"
+                }
+              },
+              {
+                "text": {
+                  "ja": "優遇措置実施証明書（新築住宅）",
+                  "en": "Certificate of implementation of preferential treatment (newly built housing)",
+                  "zh": "优待落实证明（新建住房）",
+                  "ko": "우대 조치 실시 증명서(신축 주택)",
+                  "vi": "Giấy chứng nhận thực hiện ưu đãi (nhà ở xây mới)"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "交付請求書（様式第10号）",
+                  "en": "Issuance request form (Form No. 10)",
+                  "zh": "发行申请表（表10号）",
+                  "ko": "교부 청구서(양식 제10호)",
+                  "vi": "Mẫu đề nghị cấp (Mẫu số 10)"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "young-housing-loan",
@@ -875,7 +1526,83 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "募集年度と金融機関により確認書類が変わる場合があります。公式ページの募集案内と申請様式を必ず確認してください。",
+          "en": "Confirmation documents may vary depending on the recruitment year and financial institution. Please be sure to check the recruitment information and application form on the official page.",
+          "zh": "确认文件可能因招聘年份和金融机构而异。请务必查看官方页面的招聘信息和申请表。",
+          "ko": "모집연도와 금융기관에 따라 확인서류가 변경될 수 있습니다. 공식 페이지의 모집 안내와 신청 양식을 반드시 확인해 주세요.",
+          "vi": "Tài liệu xác nhận có thể thay đổi tùy theo năm tuyển dụng và tổ chức tài chính. Hãy nhớ kiểm tra thông tin tuyển dụng và mẫu đơn đăng ký trên trang chính thức."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "申請時に準備する主な書類",
+              "en": "Main documents to prepare when applying",
+              "zh": "申请时需要准备的主要文件",
+              "ko": "신청 시 준비할 주요 서류",
+              "vi": "Các giấy tờ chính cần chuẩn bị khi nộp hồ sơ"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付申請書",
+                  "en": "Issuance application form",
+                  "zh": "发行申请表",
+                  "ko": "교부 신청서",
+                  "vi": "Đơn xin cấp giấy phép"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住宅ローン契約書（金銭消費貸借契約書）の写し",
+                  "en": "Copy of mortgage loan contract (monetary loan contract)",
+                  "zh": "抵押借款合同（货币借款合同）复印件",
+                  "ko": "모기지 론 계약서(금전 소비 대차 계약서)의 사본",
+                  "vi": "Bản sao hợp đồng vay thế chấp (hợp đồng vay tiền)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "返済予定表など借入額・金利・返済期間が分かる書類",
+                  "en": "Documents showing the loan amount, interest rate, and repayment period, such as repayment schedule",
+                  "zh": "显示贷款金额、利率和还款期限的文件，例如还款时间表",
+                  "ko": "상환 일정 등 차입액, 금리, 상환 기간을 알 수 있는 서류",
+                  "vi": "Tài liệu thể hiện số tiền vay, lãi suất và thời gian trả nợ, chẳng hạn như lịch trả nợ"
+                }
+              },
+              {
+                "text": {
+                  "ja": "対象住宅に居住していることが分かる住民票",
+                  "en": "Residence certificate showing that you live in the target housing",
+                  "zh": "表明您居住在目标住房的居住证明",
+                  "ko": "대상 주택에 거주하고 있는 것을 알 수 있는 주민표",
+                  "vi": "Giấy chứng nhận cư trú cho thấy bạn sống ở nơi ở mục tiêu"
+                }
+              },
+              {
+                "text": {
+                  "ja": "年齢・世帯関係を確認できる書類",
+                  "en": "Documents that can confirm age and household relationship",
+                  "zh": "可以确认年龄和家庭关系的文件",
+                  "ko": "연령·가구 관계를 확인할 수 있는 서류",
+                  "vi": "Tài liệu có thể xác nhận tuổi tác và mối quan hệ trong gia đình"
+                }
+              },
+              {
+                "text": {
+                  "ja": "市税の滞納がないことを確認できる書類",
+                  "en": "Document that confirms that there is no delinquency of city tax",
+                  "zh": "确认没有拖欠城市税的文件",
+                  "ko": "시세의 체납이 없는지 확인할 수 있는 서류",
+                  "vi": "Tài liệu xác nhận rằng không có khoản nợ thuế thành phố nào quá hạn"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "newlywed-life",
@@ -1074,7 +1801,126 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "抽選当選者のみ申請できます。費用区分ごとに契約書と支払証明が必要です。",
+          "en": "Only lottery winners can apply. A contract and proof of payment are required for each cost category.",
+          "zh": "只有彩票中奖者可以申请。每个成本类别都需要合同和付款证明。",
+          "ko": "추첨 당첨자만 신청할 수 있습니다. 비용 구분마다 계약서와 지불 증명이 필요합니다.",
+          "vi": "Chỉ những người trúng xổ số mới có thể đăng ký. Mỗi loại chi phí phải có hợp đồng và bằng chứng thanh toán."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "全世帯共通",
+              "en": "Common to all households",
+              "zh": "所有家庭通用",
+              "ko": "모든 가구 공통",
+              "vi": "Chung cho mọi hộ gia đình"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付申請書兼実績報告書（様式第1号）",
+                  "en": "Issuance application form and performance report (Form No. 1)",
+                  "zh": "发行申请表及业绩报告（表1号）",
+                  "ko": "교부 신청서 겸 실적 보고서(양식 제1호)",
+                  "vi": "Đơn đề nghị cấp và báo cáo thực hiện (Mẫu số 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "婚姻後の戸籍全部事項証明書または婚姻届受理証明書",
+                  "en": "Certificate of all family register matters after marriage or marriage registration acceptance certificate",
+                  "zh": "结婚后户籍全部事项证明或婚姻登记受理证明",
+                  "ko": "혼인 후 호적 전부 사항 증명서 또는 혼인 신고 수리 증명서",
+                  "vi": "Giấy chứng nhận mọi vấn đề về đăng ký kết hôn sau khi kết hôn hoặc giấy chấp nhận đăng ký kết hôn"
+                }
+              },
+              {
+                "text": {
+                  "ja": "世帯全員の住民票の写し",
+                  "en": "Copies of resident records for all members of the household",
+                  "zh": "所有家庭成员的居民记录副本",
+                  "ko": "가구 전원의 주민표 사본",
+                  "vi": "Bản sao hồ sơ cư trú của tất cả thành viên trong gia đình"
+                }
+              },
+              {
+                "text": {
+                  "ja": "夫婦それぞれの所得（課税）証明書",
+                  "en": "Income (taxation) certificate for each couple",
+                  "zh": "每对夫妇的收入（税务）证明",
+                  "ko": "부부 각각의 소득(과세) 증명서",
+                  "vi": "Giấy chứng nhận thu nhập (thuế) của mỗi cặp vợ chồng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "貸与型奨学金の返済額が分かる書類",
+                  "en": "Documents showing the repayment amount of loan-type scholarships",
+                  "zh": "贷款类奖学金还款金额证明文件",
+                  "ko": "대여형 장학금 상환액을 알 수 있는 서류",
+                  "vi": "Giấy tờ chứng minh số tiền hoàn trả học bổng vay vốn"
+                },
+                "conditional": true
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "申請する費用に応じて",
+              "en": "Depending on the cost of applying",
+              "zh": "取决于申请费用",
+              "ko": "신청하는 비용에 따라",
+              "vi": "Tùy thuộc vào chi phí nộp hồ sơ"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "賃貸借契約書、賃料等の領収書・支払明細、夫婦それぞれの住宅手当支給証明書",
+                  "en": "Rental contract, receipt/payment details for rent, housing allowance payment certificate for each couple",
+                  "zh": "租赁合同、租金收/付明细、每对夫妇的住房补贴发放证明",
+                  "ko": "임대차 계약서, 임대료 등의 영수증·지급 명세서, 부부 각각의 주택 수당 지급 증명서",
+                  "vi": "Hợp đồng thuê nhà, chi tiết biên nhận/thanh toán tiền thuê nhà, giấy chứng nhận thanh toán trợ cấp nhà ở cho từng cặp vợ chồng"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "住宅の売買契約書と領収書",
+                  "en": "Residence sales contract and receipt",
+                  "zh": "房屋销售合同和收据",
+                  "ko": "주택 매매 계약서 및 영수증",
+                  "vi": "Hợp đồng mua bán nhà ở và biên nhận"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "リフォーム工事請負契約書と領収書",
+                  "en": "Renovation work contract and receipt",
+                  "zh": "装修工程合同及收据",
+                  "ko": "리폼 공사 계약 계약 및 영수증",
+                  "vi": "Hợp đồng cải tạo và biên nhận"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "引越しの領収書と引越し先住所を確認できる書類",
+                  "en": "Moving receipt and documents that can confirm the new address",
+                  "zh": "搬家收据和可以确认新地址的文件",
+                  "ko": "이사 영수증 및 이사 주소를 확인할 수 있는 서류",
+                  "vi": "Chuyển biên nhận và tài liệu có thể xác nhận địa chỉ mới"
+                },
+                "conditional": true
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "earthquake-resistance",
@@ -1168,7 +2014,166 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "工事に着手する前に交付申請が必要です。写真は施工前・施工中・完了時に忘れず記録してください。",
+          "en": "Application for issuance is required before starting construction. Don't forget to take photos before, during, and after construction.",
+          "zh": "开工前需申请签发。不要忘记在施工前、施工中和施工后拍照。",
+          "ko": "공사에 착수하기 전에 교부 신청이 필요합니다. 사진은 시공전·시공중·완료시에 잊지 않고 기록해 주세요.",
+          "vi": "Cần phải có đơn xin cấp phép trước khi khởi công xây dựng. Đừng quên chụp ảnh trước, trong và sau khi thi công."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "工事着手前",
+              "en": "Before construction starts",
+              "zh": "施工开始前",
+              "ko": "공사 착수전",
+              "vi": "Trước khi bắt đầu xây dựng"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "交付申請書（様式第1号）",
+                  "en": "Issuance application form (Form No. 1)",
+                  "zh": "发行申请表（表1）",
+                  "ko": "교부 신청서(양식 제1호)",
+                  "vi": "Đơn đề nghị cấp giấy phép (Mẫu số 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住宅耐震化促進事業実施計画書（様式第2号）",
+                  "en": "Housing earthquake resistance promotion project implementation plan (Form No. 2)",
+                  "zh": "住房抗震提升工程实施方案（表2号）",
+                  "ko": "주택 내진화 촉진 사업 실시 계획서(양식 제2호)",
+                  "vi": "Kế hoạch thực hiện dự án tăng cường chống chịu động đất nhà ở (Mẫu số 2)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "市税の滞納がないことを示す証明書",
+                  "en": "Certificate showing that there is no delinquency of city tax",
+                  "zh": "证明没有拖欠城市税的证明",
+                  "ko": "시세의 체납이 없음을 나타내는 증명서",
+                  "vi": "Giấy chứng nhận không nợ thuế thành phố"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住宅の登記事項証明書",
+                  "en": "Residence registration certificate",
+                  "zh": "居住登记证明",
+                  "ko": "주택 등기항 증명서",
+                  "vi": "Giấy đăng ký cư trú"
+                }
+              },
+              {
+                "text": {
+                  "ja": "建築年・建築確認年月日が分かる書類",
+                  "en": "Documents showing the year of construction and date of construction confirmation",
+                  "zh": "显示建造年份和建造确认日期的文件",
+                  "ko": "건축년・건축 확인 연월일을 알 수 있는 서류",
+                  "vi": "Giấy tờ thể hiện năm xây dựng và ngày xác nhận xây dựng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "内訳付き見積書の写し",
+                  "en": "Copy of detailed quotation",
+                  "zh": "详细报价单副本",
+                  "ko": "내역이 있는 견적서 사본",
+                  "vi": "Bản sao báo giá chi tiết"
+                }
+              },
+              {
+                "text": {
+                  "ja": "耐震診断結果報告書、補強計画書、工事図面",
+                  "en": "Seismic diagnosis report, reinforcement plan, construction drawings",
+                  "zh": "地震诊断报告、加固方案、施工图",
+                  "ko": "내진 진단 결과 보고서, 보강 계획서, 공사 도면",
+                  "vi": "Báo cáo chẩn đoán địa chấn, phương án gia cố, bản vẽ thi công"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住宅外観の写真（東西南北4面）",
+                  "en": "Photo of the exterior of the house (4 sides, north, south, east and west)",
+                  "zh": "房屋外观照片（4面，北、南、东、西）",
+                  "ko": "주택 외관 사진(동서남북 4면)",
+                  "vi": "Ảnh mặt ngoài ngôi nhà (4 mặt Bắc, Nam, Đông, Tây)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "切手を貼った通知書送付用封筒",
+                  "en": "Stamped envelope for sending notices",
+                  "zh": "用于发送通知的已贴邮票的信封",
+                  "ko": "우표를 붙인 통지서 송부용 봉투",
+                  "vi": "Phong bì dán tem để gửi thông báo"
+                }
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "工事完了後",
+              "en": "After construction completion",
+              "zh": "施工完成后",
+              "ko": "공사 완료 후",
+              "vi": "Sau khi thi công hoàn thiện"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "完了報告書（様式第8号）と実績書（様式第9号）",
+                  "en": "Completion report (Form No. 8) and performance statement (Form No. 9)",
+                  "zh": "竣工报告（表 8）和绩效报表（表 9）",
+                  "ko": "완료 보고서(양식 제8호)와 실적서(양식 제9호)",
+                  "vi": "Báo cáo hoàn thành (Mẫu số 8) và báo cáo kết quả thực hiện (Mẫu số 9)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "契約書・領収書・内訳付き見積書の写し",
+                  "en": "Copy of contract, receipt, and quotation with breakdown",
+                  "zh": "合同、收据和报价单的副本（附明细）",
+                  "ko": "계약서, 영수증, 내역이있는 견적서 사본",
+                  "vi": "Bản sao hợp đồng, biên lai và báo giá kèm theo thông tin chi tiết"
+                }
+              },
+              {
+                "text": {
+                  "ja": "施工前・施工中・完了時の写真",
+                  "en": "Photos before, during, and completed construction",
+                  "zh": "施工前、施工期间和施工完成后的照片",
+                  "ko": "시공 전 · 시공 중 · 완료시의 사진",
+                  "vi": "Ảnh trước, trong và hoàn thiện"
+                }
+              },
+              {
+                "text": {
+                  "ja": "改修前後の平面図と改修後の耐震診断結果",
+                  "en": "Floor plan before and after renovation and seismic diagnosis results after renovation",
+                  "zh": "改造前后平面图及改造后地震诊断结果",
+                  "ko": "리노베이션 전후 평면도 및 리노베이션 후 내진 진단 결과",
+                  "vi": "Sơ đồ mặt bằng trước và sau cải tạo và kết quả chẩn đoán địa chấn sau cải tạo"
+                }
+              },
+              {
+                "text": {
+                  "ja": "交付請求書（様式第11号。受領委任払は様式第12号）",
+                  "en": "Issuance request form (Form No. 11. Receipt and payment by proxy is Form No. 12)",
+                  "zh": "签发申请表（表号11。代理收付款为表号12）",
+                  "ko": "교부 청구서(양식 제11호. 수령 위임 지불은 양식 제12호)",
+                  "vi": "Mẫu đề nghị cấp (Mẫu số 11. Nhận và thanh toán qua ủy nhiệm là Mẫu số 12)"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "population-settlement-housing",
@@ -1245,7 +2250,85 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "募集住宅や世帯状況により提出書類が異なります。募集時に各総合支所地域政策課から案内される書類を確認してください。",
+          "en": "Documents to be submitted vary depending on the housing you are applying for and household situation. Please check the documents provided by the Regional Policy Division of each general branch office at the time of recruitment.",
+          "zh": "根据您申请的住房和家庭情况，需要提交的文件有所不同。请在招聘时检查各总办事处地区政策科提供的文件。",
+          "ko": "모집 주택 및 가구 상황에 따라 제출 서류가 다릅니다. 모집시에 각 종합 출장소 지역 정책과로부터 안내되는 서류를 확인해 주세요.",
+          "vi": "Các tài liệu cần nộp sẽ khác nhau tùy thuộc vào loại nhà ở bạn đang đăng ký và hoàn cảnh gia đình. Vui lòng kiểm tra các tài liệu do Phòng Chính sách Khu vực của từng văn phòng chi nhánh tổng hợp cung cấp tại thời điểm tuyển dụng."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "入居申込時の主な書類",
+              "en": "Main documents when applying for housing",
+              "zh": "申请住房时的主要文件",
+              "ko": "입주 신청 시 주요 서류",
+              "vi": "Các giấy tờ chính khi đăng ký nhà ở"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "人口定住促進住宅の入居申込書",
+                  "en": "Application form for housing to promote population settlement",
+                  "zh": "促进人口落户住房申请表",
+                  "ko": "인구 정주 촉진 주택 입주 신청서",
+                  "vi": "Mẫu đơn xin cấp nhà ở nhằm thúc đẩy an cư lạc nghiệp"
+                }
+              },
+              {
+                "text": {
+                  "ja": "入居予定者全員の住民票",
+                  "en": "Residence certificate of all prospective residents",
+                  "zh": "所有潜在居民的居住证明",
+                  "ko": "입주 예정자 전원의 주민표",
+                  "vi": "Giấy chứng nhận cư trú của tất cả cư dân tương lai"
+                }
+              },
+              {
+                "text": {
+                  "ja": "世帯全員の所得を確認できる証明書",
+                  "en": "Certificate that confirms the income of all members of the household",
+                  "zh": "证明家庭所有成员的收入",
+                  "ko": "모든 가구의 소득을 확인할 수 있는 인증서",
+                  "vi": "Chứng nhận xác nhận thu nhập của tất cả thành viên trong hộ gia đình"
+                }
+              },
+              {
+                "text": {
+                  "ja": "市税の滞納がないことを確認できる書類",
+                  "en": "Document that confirms that there is no delinquency of city tax",
+                  "zh": "确认没有拖欠城市税的文件",
+                  "ko": "시세의 체납이 없는지 확인할 수 있는 서류",
+                  "vi": "Tài liệu xác nhận rằng không có khoản nợ thuế thành phố nào quá hạn"
+                }
+              },
+              {
+                "text": {
+                  "ja": "婚姻・親族関係を確認できる戸籍等",
+                  "en": "Family register, etc. that can confirm marriage/kinship relationships",
+                  "zh": "可以确认婚姻/亲属关系的户口簿等",
+                  "ko": "혼인·친족 관계를 확인할 수 있는 호적 등",
+                  "vi": "Sổ đăng ký gia đình, v.v. có thể xác nhận mối quan hệ hôn nhân/họ hàng"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "UIJターンや就業状況を確認できる書類",
+                  "en": "Documents that can confirm UIJ turn and employment status",
+                  "zh": "可以确认UIJ转职和就业状况的文件",
+                  "ko": "UIJ 턴 및 취업 상황을 확인할 수 있는 서류",
+                  "vi": "Tài liệu có thể xác nhận tình trạng việc làm và chuyển sang UIJ"
+                },
+                "conditional": true
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "pregnant-women-support",
@@ -1326,7 +2409,87 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "振込先は妊産婦本人名義の口座に限られます。申請書は妊娠届出時の面談または乳児家庭訪問時に渡されます。",
+          "en": "Payments can only be made to an account in the name of the pregnant woman. The application form will be given to you during the interview when you register your pregnancy or during your baby's home visit.",
+          "zh": "只能向孕妇名下的账户付款。申请表将在您登记怀孕时或在宝宝家访时面谈时交给您。",
+          "ko": "송금처는 임산부 본인 명의의 계좌로 한정됩니다. 신청서는 임신 신고시의 면담 또는 유아 가정 방문시에 건네집니다.",
+          "vi": "Chỉ có thể thực hiện thanh toán vào tài khoản đứng tên phụ nữ mang thai. Mẫu đơn sẽ được trao cho bạn trong buổi phỏng vấn khi bạn đăng ký mang thai hoặc khi về thăm nhà con bạn."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "申請時",
+              "en": "When applying",
+              "zh": "申请时",
+              "ko": "신청 시",
+              "vi": "Khi đăng ký"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "妊婦給付認定申請書または胎児の数の届出書",
+                  "en": "Application for Certification of Pregnant Women Benefits or Notification of Number of Fetuses",
+                  "zh": "孕妇福利证明或胎儿数量通知申请表",
+                  "ko": "임산부 급여 인증 신청서 또는 태아 수의 신고서",
+                  "vi": "Đơn xin cấp Giấy chứng nhận Quyền lợi Phụ nữ Mang thai hoặc Thông báo Số lượng Thai nhi"
+                }
+              },
+              {
+                "text": {
+                  "ja": "妊産婦本人の本人確認書類（マイナンバーカード、運転免許証、パスポート等）",
+                  "en": "Identity verification documents for pregnant women (My number card, driver's license, passport, etc.)",
+                  "zh": "孕妇身份验证文件（我的号码卡、驾驶执照、护照等）",
+                  "ko": "임산부 본인의 본인 확인 서류(마이 넘버 카드, 운전 면허증, 여권 등)",
+                  "vi": "Giấy tờ xác minh danh tính đối với phụ nữ mang thai (Thẻ số của tôi, bằng lái xe, hộ chiếu, v.v.)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "妊産婦本人名義の金融機関口座を確認できるもの",
+                  "en": "Identification of the financial institution account in the name of the pregnant woman",
+                  "zh": "孕妇名下的金融机构账户身份证明",
+                  "ko": "임산부 본인 명의의 금융기관 계좌를 확인할 수 있는 것",
+                  "vi": "Nhận dạng tài khoản tổ chức tài chính đứng tên phụ nữ mang thai"
+                }
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "流産・死産等の場合",
+              "en": "In case of miscarriage, stillbirth, etc.",
+              "zh": "流产、死产等情况",
+              "ko": "유산·사산 등의 경우",
+              "vi": "Trong trường hợp sẩy thai, thai chết lưu, v.v."
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "妊娠届出済みの場合は母子健康手帳",
+                  "en": "Maternal and child health handbook if pregnancy notification has been completed",
+                  "zh": "已完成怀孕申报的母子健康手册",
+                  "ko": "임신 신고가 끝나면 모자 건강 수첩",
+                  "vi": "Cẩm nang sức khỏe bà mẹ và trẻ em nếu đã khai báo thai kỳ"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "妊娠届出前の場合は医師の診断書",
+                  "en": "Doctor's medical certificate if the pregnancy has not yet been registered",
+                  "zh": "医生的医疗证明（如果尚未登记怀孕）",
+                  "ko": "임신 신고 전의 경우 의사의 진단서",
+                  "vi": "Giấy chứng nhận của bác sĩ nếu thai chưa được đăng ký"
+                },
+                "conditional": true
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "general-infertility",
@@ -1429,7 +2592,93 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "住民票と所得・課税証明書は、市が公簿で確認することへの同意により省略できる場合があります。",
+          "en": "Residence certificate and income/tax certificate may be omitted if the city agrees to check them in the public register.",
+          "zh": "如果市政府同意在公共登记册中检查居住证和收入/纳税证明，则可以省略它们。",
+          "ko": "주민표와 소득·과세 증명서는, 시가 공부로 확인하는 것의 동의에 의해 생략할 수 있는 경우가 있습니다.",
+          "vi": "Giấy chứng nhận cư trú và giấy chứng nhận thu nhập/thuế có thể bị bỏ qua nếu thành phố đồng ý kiểm tra chúng trong sổ đăng ký công cộng."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "申請時",
+              "en": "When applying",
+              "zh": "申请时",
+              "ko": "신청 시",
+              "vi": "Khi đăng ký"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "一般不妊治療費助成事業申請書",
+                  "en": "General infertility treatment expense subsidy project application form",
+                  "zh": "一般不孕不育治疗费用补贴项目申请表",
+                  "ko": "일반 불임 치료비 조성 사업 신청서",
+                  "vi": "Mẫu đơn đăng ký dự án trợ cấp chi phí điều trị vô sinh tổng quát"
+                }
+              },
+              {
+                "text": {
+                  "ja": "医療機関等証明書",
+                  "en": "Medical institution certificate",
+                  "zh": "医疗机构证明",
+                  "ko": "의료기관등 증명서",
+                  "vi": "Giấy chứng nhận của tổ chức y tế"
+                }
+              },
+              {
+                "text": {
+                  "ja": "発行後1か月以内の続柄記載の住民票",
+                  "en": "Residence card showing relationship within one month after issue",
+                  "zh": "显示签发后1个月内的关系的居留卡",
+                  "ko": "발행 후 1개월 이내의 연속 기재의 주민표",
+                  "vi": "Thẻ cư trú thể hiện mối quan hệ trong vòng một tháng sau khi cấp"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住民票で婚姻関係を確認できない場合は戸籍全部事項証明書",
+                  "en": "If marital status cannot be confirmed with resident record, complete family register certificate",
+                  "zh": "如果无法通过户口簿确认婚姻状况，请提供完整的户口证明",
+                  "ko": "주민표에서 혼인관계를 확인할 수 없는 경우는 호적 전부 사항 증명서",
+                  "vi": "Nếu tình trạng hôn nhân không thể được xác nhận bằng hồ sơ cư trú, hãy hoàn thành giấy chứng nhận đăng ký gia đình"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "夫婦それぞれの所得・課税証明書",
+                  "en": "Income and taxation certificate for each couple",
+                  "zh": "每对夫妇的收入和纳税证明",
+                  "ko": "부부 각각의 소득·과세 증명서",
+                  "vi": "Giấy chứng nhận thu nhập và thuế của từng cặp vợ chồng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "医療費の領収書等",
+                  "en": "Receipts for medical expenses, etc.",
+                  "zh": "医疗费收据等",
+                  "ko": "의료비 영수증 등",
+                  "vi": "Biên lai chi phí y tế, v.v."
+                }
+              },
+              {
+                "text": {
+                  "ja": "振込先口座を確認できるもの",
+                  "en": "Things that can confirm the transfer destination account",
+                  "zh": "可以确认转账目的地账户的事项",
+                  "ko": "송금 계좌를 확인할 수 있는 항목",
+                  "vi": "Những thứ có thể xác nhận tài khoản đích chuyển"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "specified-infertility",
@@ -1532,7 +2781,103 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "治療区分や県助成の利用状況により書類が異なります。申請前に健康推進課へ確認してください。",
+          "en": "Documents vary depending on the treatment category and usage status of prefectural subsidies. Please check with the Health Promotion Division before applying.",
+          "zh": "文件根据都道府县补贴的待遇类别和使用情况而有所不同。请在申请前向健康促进科确认。",
+          "ko": "치료 구분이나 현 조성의 이용 상황에 따라 서류가 다릅니다. 신청 전에 건강 추진과에 확인해 주세요.",
+          "vi": "Các tài liệu khác nhau tùy thuộc vào loại điều trị và tình trạng sử dụng trợ cấp của tỉnh. Vui lòng kiểm tra với Phòng Xúc tiến Y tế trước khi nộp đơn."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "申請時の主な書類",
+              "en": "Main documents for application",
+              "zh": "申请主要文件",
+              "ko": "신청 시 주요 서류",
+              "vi": "Tài liệu chính để nộp đơn"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "不妊治療費助成申請書",
+                  "en": "Application form for subsidy for infertility treatment expenses",
+                  "zh": "不孕不育治疗费用补贴申请表",
+                  "ko": "불임치료비 조성 신청서",
+                  "vi": "Đơn đề nghị hỗ trợ chi phí điều trị hiếm muộn"
+                }
+              },
+              {
+                "text": {
+                  "ja": "医療機関が作成した治療・費用の証明書",
+                  "en": "Certificate of treatment/expenses created by medical institution",
+                  "zh": "医疗机构开具的治疗/费用证明",
+                  "ko": "의료 기관이 작성한 치료 및 비용 증명서",
+                  "vi": "Giấy chứng nhận điều trị/chi phí do cơ sở y tế lập"
+                }
+              },
+              {
+                "text": {
+                  "ja": "治療費の領収書",
+                  "en": "Receipt of treatment expenses",
+                  "zh": "治疗费用收据",
+                  "ko": "치료비 영수증",
+                  "vi": "Biên lai chi phí điều trị"
+                }
+              },
+              {
+                "text": {
+                  "ja": "続柄記載の住民票",
+                  "en": "Residence record showing relationship",
+                  "zh": "显示关系的居住记录",
+                  "ko": "계속 기재된 주민표",
+                  "vi": "Hồ sơ cư trú thể hiện mối quan hệ"
+                }
+              },
+              {
+                "text": {
+                  "ja": "住民票で婚姻関係を確認できない場合は戸籍全部事項証明書",
+                  "en": "If marital status cannot be confirmed with resident record, complete family register certificate",
+                  "zh": "如果无法通过户口簿确认婚姻状况，请提供完整的户口证明",
+                  "ko": "주민표에서 결혼 관계를 확인할 수 없는 경우는 호적 전부 사항 증명서",
+                  "vi": "Nếu tình trạng hôn nhân không thể được xác nhận bằng hồ sơ cư trú, hãy hoàn thành giấy chứng nhận đăng ký gia đình"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "夫婦それぞれの所得・課税証明書",
+                  "en": "Income and taxation certificate for each couple",
+                  "zh": "每对夫妇的收入和纳税证明",
+                  "ko": "부부 각각의 소득·과세 증명서",
+                  "vi": "Giấy chứng nhận thu nhập và thuế của từng cặp vợ chồng"
+                }
+              },
+              {
+                "text": {
+                  "ja": "県の助成を利用した場合は承認決定通知書等",
+                  "en": "If you used prefectural subsidies, approval decision notification etc.",
+                  "zh": "使用都道府县补助金、批准决定通知书等时",
+                  "ko": "현의 조성을 이용한 경우는 승인 결정 통지서 등",
+                  "vi": "Nếu bạn sử dụng trợ cấp của tỉnh, thông báo quyết định phê duyệt, v.v."
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "振込先口座を確認できるもの",
+                  "en": "Things that can confirm the transfer destination account",
+                  "zh": "可以确认转账目的地账户的事项",
+                  "ko": "송금 대상 계좌 확인 가능",
+                  "vi": "Những thứ có thể xác nhận tài khoản đích chuyển"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "children-future",
@@ -1665,7 +3010,169 @@
           "type": "yesno",
           "required": true
         }
-      ]
+      ],
+      "requiredDocuments": {
+        "notice": {
+          "ja": "事業完了後20日以内に実績報告が必要です。支払い証明と活動写真を実施中から整理してください。",
+          "en": "A performance report is required within 20 days after project completion. Please organize proof of payment and activity photos from the beginning.",
+          "zh": "项目完成后20天内需要提交绩效报告。请从一开始就整理好付款证明和活动照片。",
+          "ko": "사업 완료 후 20일 이내에 성과 보고가 필요합니다. 결제 증명과 활동 사진을 실시중에서 정리해 주세요.",
+          "vi": "Báo cáo hiệu suất được yêu cầu trong vòng 20 ngày sau khi hoàn thành dự án. Vui lòng sắp xếp bằng chứng thanh toán và ảnh hoạt động ngay từ đầu."
+        },
+        "sections": [
+          {
+            "title": {
+              "ja": "事業実施前の申請時",
+              "en": "When applying before project implementation",
+              "zh": "项目实施前申请时",
+              "ko": "사업 실시 전 신청 시",
+              "vi": "Khi nộp hồ sơ trước khi triển khai dự án"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "申請書（様式第1号）",
+                  "en": "Application form (Form No. 1)",
+                  "zh": "申请表（表1）",
+                  "ko": "신청서(양식 제1호)",
+                  "vi": "Đơn đăng ký (Mẫu số 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "子どもの居場所提供事業計画書（様式第2号その1）",
+                  "en": "Children's place provision business plan (Form No. 2, Part 1)",
+                  "zh": "儿童场所供应业务计划（表 2，第 1 部分）",
+                  "ko": "어린이 거주지 제공 사업 계획서(양식 제2호 그 1)",
+                  "vi": "Kế hoạch kinh doanh cung cấp chỗ ở cho trẻ em (Mẫu số 2, Phần 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "収支計画書（様式第3号）",
+                  "en": "Income and Expenditure Plan (Form No. 3)",
+                  "zh": "收入和支出计划（表 3）",
+                  "ko": "수지 계획서(양식 제3호)",
+                  "vi": "Kế hoạch thu chi (Mẫu số 3)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "団体の定款・会則またはこれに代わるもの",
+                  "en": "Organization's articles of incorporation/regulations or an alternative thereof",
+                  "zh": "组织的公司章程/法规或其替代品",
+                  "ko": "단체의 정관·회칙 또는 이에 대한 대체",
+                  "vi": "Điều khoản thành lập/quy định của tổ chức hoặc điều khoản thay thế"
+                }
+              },
+              {
+                "text": {
+                  "ja": "役員等の名簿",
+                  "en": "List of officers, etc.",
+                  "zh": "官员名单等",
+                  "ko": "임원 등의 명부",
+                  "vi": "Danh sách sĩ quan, v.v."
+                }
+              },
+              {
+                "text": {
+                  "ja": "概算払を希望する場合は概算払請求書（様式第13号）",
+                  "en": "If you wish to make an estimated payment, please submit an estimated payment request form (Form No. 13)",
+                  "zh": "如果您希望预计付款，请提交预计付款申请表（表 13）",
+                  "ko": "대략적인 지불을 원할 경우 대략적인 지불 송장 (양식 13)",
+                  "vi": "Nếu bạn muốn thực hiện thanh toán ước tính, vui lòng gửi biểu mẫu yêu cầu thanh toán ước tính (Mẫu số 13)"
+                },
+                "conditional": true
+              }
+            ]
+          },
+          {
+            "title": {
+              "ja": "事業完了後",
+              "en": "After project completion",
+              "zh": "项目完成后",
+              "ko": "사업 완료 후",
+              "vi": "Sau khi hoàn thành dự án"
+            },
+            "items": [
+              {
+                "text": {
+                  "ja": "実績報告書（様式第8号）",
+                  "en": "Accomplishment report (Form No. 8)",
+                  "zh": "成绩报告（表8）",
+                  "ko": "실적 보고서(양식 제8호)",
+                  "vi": "Báo cáo thực hiện (Mẫu số 8)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "事業報告書（様式第9号その1）",
+                  "en": "Business report (Form No. 9 Part 1)",
+                  "zh": "业务报告（表 9 第 1 部分）",
+                  "ko": "사업 보고서(양식 제9호 그 1)",
+                  "vi": "Báo cáo kinh doanh (Mẫu số 9 Phần 1)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "収支決算書（様式第10号）",
+                  "en": "Income and Expenditure Statement (Form No. 10)",
+                  "zh": "收入和支出报表（表 10）",
+                  "ko": "수지 결산서(양식 제10호)",
+                  "vi": "Báo cáo thu nhập và chi tiêu (Mẫu số 10)"
+                }
+              },
+              {
+                "text": {
+                  "ja": "補助対象経費の支払いを証する書類の写し",
+                  "en": "Copy of document proving payment of subsidized expenses",
+                  "zh": "证明支付补贴费用的文件副本",
+                  "ko": "보조 대상 경비의 지불을 증명하는 서류 사본",
+                  "vi": "Bản sao chứng từ chứng minh đã thanh toán chi phí được trợ cấp"
+                }
+              },
+              {
+                "text": {
+                  "ja": "活動写真、パンフレット、チラシ等",
+                  "en": "Activity photos, pamphlets, flyers, etc.",
+                  "zh": "活动照片、小册子、传单等",
+                  "ko": "활동 사진, 브로셔, 전단지 등",
+                  "vi": "Hình ảnh hoạt động, tờ rơi, tờ rơi, v.v."
+                }
+              },
+              {
+                "text": {
+                  "ja": "振込先口座の通帳の写し",
+                  "en": "Copy of passbook of transfer account",
+                  "zh": "转账账户存折复印件",
+                  "ko": "송금 계좌 통장 사본",
+                  "vi": "Bản sao sổ tiết kiệm tài khoản chuyển khoản"
+                }
+              },
+              {
+                "text": {
+                  "ja": "団体名義以外の口座を使う場合は委任状",
+                  "en": "Power of attorney if using an account other than the name of the organization",
+                  "zh": "如果使用组织名称以外的帐户，则需要授权书",
+                  "ko": "단체 명의 이외의 계좌를 사용하는 경우 위임장",
+                  "vi": "Giấy ủy quyền nếu sử dụng tài khoản không phải tên tổ chức"
+                },
+                "conditional": true
+              },
+              {
+                "text": {
+                  "ja": "概算払でない場合は補助金請求書（様式第12号）",
+                  "en": "Subsidy request form (Form No. 12) if not estimated payment",
+                  "zh": "补贴申请表（表 12）（如果不是预计付款）",
+                  "ko": "대략적인 지불이 아닌 경우 보조금 청구서(양식 제12호)",
+                  "vi": "Mẫu yêu cầu trợ cấp (Mẫu số 12) nếu không phải là số tiền ước tính"
+                },
+                "conditional": true
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
