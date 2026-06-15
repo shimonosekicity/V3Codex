@@ -379,8 +379,8 @@ function renderInfo() {
     <article class="info-card">
       <h2>${escapeHtml(t("sources"))}</h2>
       <div class="source-links">
-        ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t("source_page"))} ↗</a>` : `<p>${escapeHtml(t("source_unavailable"))}</p>`}
-        ${item.kiyouUrl ? `<a href="${escapeHtml(item.kiyouUrl)}" target="_blank" rel="noopener">${escapeHtml(t("guideline_pdf"))} ↗</a>` : `<p>${escapeHtml(t("guideline_unavailable"))}</p>`}
+        ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(t("source_page"))} ↗</a>` : ""}
+        ${item.kiyouUrl ? `<a href="${escapeHtml(item.kiyouUrl)}" target="_blank" rel="noopener">${escapeHtml(t("guideline_pdf"))} ↗</a>` : ""}
       </div>
     </article>
     <button class="button primary full-width print-hide" type="button" onclick="window.print()">${escapeHtml(t("print"))}</button>

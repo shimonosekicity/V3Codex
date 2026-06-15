@@ -1,5 +1,5 @@
 {
-  "version": "3.3.0",
+  "version": "3.3.1",
   "lastUpdated": "2026-06-15",
   "subsidies": [
     {
@@ -32,7 +32,7 @@
         "dept": "LiveHUB しものせき"
       },
       "sourceUrl": "https://www.city.shimonoseki.lg.jp/soshiki/6/1122.html",
-      "kiyouUrl": "https://www.city.shimonoseki.lg.jp/soshiki/6/1122.html",
+      "kiyouUrl": null,
       "status": "active",
       "note": {
         "ja": "やまぐち創業補助金と合算で創業者は最大300万円",
@@ -304,7 +304,7 @@
         "dept": "LiveHUB しものせき"
       },
       "sourceUrl": "https://www.city.shimonoseki.lg.jp/soshiki/6/125628.html",
-      "kiyouUrl": "https://www.city.shimonoseki.lg.jp/soshiki/6/125628.html",
+      "kiyouUrl": null,
       "status": "active",
       "note": {
         "ja": ""
@@ -1481,7 +1481,7 @@
         "dept": "LiveHUB しものせき"
       },
       "sourceUrl": "https://www.shimonosekicitypromotion.jp/133714.html",
-      "kiyouUrl": "https://www.shimonosekicitypromotion.jp/133714.html",
+      "kiyouUrl": null,
       "status": "active",
       "note": {
         "ja": ""
@@ -2205,7 +2205,7 @@
         "dept": "豊北総合支所 地域政策課"
       },
       "sourceUrl": "https://www.city.shimonoseki.lg.jp/soshiki/6/1046.html",
-      "kiyouUrl": "https://www.city.shimonoseki.lg.jp/soshiki/6/1046.html",
+      "kiyouUrl": null,
       "status": "active",
       "note": {
         "ja": ""
@@ -2521,7 +2521,7 @@
         "dept": "健康推進課 母子保健係"
       },
       "sourceUrl": "https://www.city.shimonoseki.lg.jp/soshiki/51/5679.html",
-      "kiyouUrl": "https://www.city.shimonoseki.lg.jp/soshiki/51/5679.html",
+      "kiyouUrl": null,
       "status": "active",
       "note": {
         "ja": ""
@@ -2710,7 +2710,7 @@
         "dept": "健康推進課 母子保健係"
       },
       "sourceUrl": "https://www.city.shimonoseki.lg.jp/soshiki/51/5679.html",
-      "kiyouUrl": "https://www.city.shimonoseki.lg.jp/soshiki/51/5679.html",
+      "kiyouUrl": null,
       "status": "active",
       "note": {
         "ja": ""
